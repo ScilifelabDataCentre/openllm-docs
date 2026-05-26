@@ -1,0 +1,8 @@
+services:
+  docs:
+    build: .
+    image: openllm-docs:latest
+    container_name: openllm-docs
+    ports:
+      - "8000:80"
+    restart: unless-stopped

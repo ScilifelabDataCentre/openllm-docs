@@ -1,0 +1,12 @@
+.git
+.gitignore
+.github
+.venv
+venv
+__pycache__
+*.pyc
+.DS_Store
+README.md
+LICENSE
+.editorconfig
+**/site/
