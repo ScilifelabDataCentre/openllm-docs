@@ -34,7 +34,7 @@ openllm-docs/
 
 ## Quick start
 
-### Option A — Docker (recommended)
+### Docker
 
 ```bash
 docker compose up --build
@@ -47,21 +47,6 @@ Or without compose:
 ```bash
 docker build -t openllm-docs .
 docker run --rm -p 8000:80 openllm-docs
-```
-
-### Option B — Local dev with live reload
-
-Run each site on its own port; edits to Markdown reload automatically.
-
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-
-# Use policy at http://127.0.0.1:8001
-(cd use-policy && mkdocs serve -a 127.0.0.1:8001)
-
-# Guides at http://127.0.0.1:8002 (in another terminal)
-(cd guides && mkdocs serve -a 127.0.0.1:8002)
 ```
 
 Locally, both sites serve from `/`, not from `/use-policy/` or `/guides/`. The subpaths only exist inside the Docker image.
@@ -127,39 +112,6 @@ Note: `handle_path` strips the prefix, which would break the in-container nginx 
 Once the paths are live, surface them inside the chat UI via **Admin Panel → Settings → Interface → Banners**, e.g.:
 
 > ⚠️ By using this service you agree to the [use policy](/use-policy/). New here? See the [guides](/guides/).
-
-## Editing content
-
-- Add or edit `.md` files under `use-policy/docs/` or `guides/docs/`.
-- For the **guides** site, add new pages to `nav:` in `guides/mkdocs.yml` so they appear in the sidebar.
-- The use-policy site is single-page; the policy lives at `use-policy/docs/index.md`.
-- Drop screenshots in `guides/docs/images/`. Filenames expected by `getting-started-api.md` are listed in `guides/docs/images/README.txt`.
-
-Both `mkdocs.yml` files enable Material's `admonition` extension, so you can use callouts like:
-
-```markdown
-!!! warning "Heads up"
-    Don't paste sensitive data into prompts.
-```
-
-## Rebuilding after changes
-
-```bash
-docker compose up --build -d
-```
-
-If you're using a registry/CI:
-
-```bash
-docker build -t registry.example.org/openllm-docs:$(git rev-parse --short HEAD) .
-docker push  registry.example.org/openllm-docs:$(git rev-parse --short HEAD)
-```
-
-## Troubleshooting
-
-- **Broken CSS/JS in production but fine locally.** The `site_url` in each `mkdocs.yml` controls the asset base path. They are set to `https://open-llm.scilifelab.se/use-policy/` and `.../guides/`. Change both if you serve from a different domain or subpath, and rebuild.
-- **`mkdocs build --strict` fails on a broken link.** Strict mode is intentional — it catches typos before they ship. Fix the link or remove `--strict` from the Dockerfile temporarily.
-- **404 inside the container but file exists.** Clean URLs need a trailing slash. `try_files` in `nginx.conf` handles this for normal navigation; if you hit it with `curl`, request `/guides/getting-started-api/` not `.../getting-started-api`.
 
 ## License / ownership
 
