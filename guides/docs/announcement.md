@@ -4,7 +4,7 @@
 
 [http://open-llm.scilifelab.se](http://open-llm.scilifelab.se) is a pilot service that SciLifeLab Data Centre is working on, and we are now accepting test users. This service gives you API access to open-weight LLMs running on our own infrastructure in Sweden.
 
-The short version: if you want to plug an LLM into your research scripts, data pipelines, or automation tools, this is built for you. The API is OpenAI-compatible, so your existing code and tooling (LangChain, LlamaIndex, Continue for VS Code, plain `curl`, etc.) should work out of the box: just swap the base URL and API key. Currently, you get access to the model **gemma3-27b**, a mid-tier model that can work with both text and images.
+The short version: if you want to plug an LLM into your research scripts, data pipelines, or automation tools, this is built for you. The API is OpenAI-compatible, so your existing code and tooling (LangChain, LlamaIndex, Continue for VS Code, plain `curl`, etc.) should work out of the box: just swap the base URL and API key. Currently, you get access to the model **gemma3-27b**[^1], a mid-tier model that can work with both text and images.
 
 A few things worth knowing:
 
@@ -26,3 +26,5 @@ We will approve registrations once both are complete within 24 hours, and you ca
     Just a quick heads-up as we kick off the pilot: we do not have any agreements (such as Service Level Agreements, SLAs) in place, and uptime or continuous availability is not guaranteed at this stage. Please avoid sending any human sensitive data to the service.
 
 We are looking forward to seeing what you build with it.
+
+[^1]: Gemma is provided under and subject to the Gemma Terms of Use found at [ai.google.dev/gemma/terms](https://ai.google.dev/gemma/terms).
