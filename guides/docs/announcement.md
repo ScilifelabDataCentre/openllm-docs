@@ -1,6 +1,6 @@
-# OpenLLM Pilot: First Announcement
+# SciLifeLab OpenLLM Pilot: First Announcement
 
-## We're opening registration for the OpenLLM pilot
+## We're opening registration for the SciLifeLab OpenLLM pilot
 
 [http://open-llm.scilifelab.se](http://open-llm.scilifelab.se) is a pilot service that SciLifeLab Data Centre is working on, and we are now accepting test users. This service gives you API access to open-weight LLMs running on our own infrastructure in Sweden.
 
@@ -8,6 +8,7 @@ The short version: if you want to plug an LLM into your research scripts, data p
 
 A few things worth knowing:
 
+- **`gemma3-27b` is the default, but other models are available.** Smaller variants (`gemma3-4b`, `mistral-7b`), a longer-context option (`mistral-nemo-12b`), a reasoning-tuned model (`deepseek-r1-8b`), and a code-focused model (`deepseek-coder-6.7b`) are also exposed via the API for cases where the default isn't the right fit. An Arena mode is available too, for blind side-by-side comparisons. See the user guide for guidance on when to pick which, and let us know if there's another open-weight model you'd like us to consider adding during the pilot.
 - **For API-based usage primarily:** the pilot is designed for programmatic use. Embed models in your workflows, build agents, run batch jobs. A chat UI exists as a convenience, but we prefer that you explore use cases with APi access.
 - **Your data stays here:** all processing happens on SciLifeLab-controlled infrastructure in Sweden. No third-party providers, no training on your data.
 - **We want to learn from you:** the goal of this pilot is to understand what use cases SciLifeLab-hosted LLMs can realistically support. We'll ask you to complete a short onboarding survey (~3 min) and check in with you twice during the pilot. We also welcome feedback at any time.

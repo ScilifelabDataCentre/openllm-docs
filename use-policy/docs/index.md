@@ -1,11 +1,11 @@
-# OpenLLM Use Policy
+# SciLifeLab OpenLLM Policy
 
 **[openllm.scilifelab.se](http://openllm.scilifelab.se/)**
 Version 1.0.0
 
 ## What is this?
 
-OpenLLM is a pilot service run by SciLifeLab Data Centre providing access to open-weight large language models (LLMs) hosted on infrastructure controlled by SciLifeLab. The service offers both a chat interface (Open WebUI) and API endpoints. The pilot runs during spring 2026 with a limited group of users.
+SciLifeLab OpenLLM is a pilot service run by SciLifeLab Data Centre providing access to open-weight large language models (LLMs) hosted on infrastructure controlled by SciLifeLab. The service offers both a chat interface (Open WebUI) and API endpoints. The pilot runs during spring 2026 with a limited group of users.
 
 Our primary focus is enabling API-based access so that LLMs can be embedded in research workflows, automation pipelines, and agentic tools. The chat interface is available as a convenience, but the pilot is not optimized for users who only need a ChatGPT-style experience.
 

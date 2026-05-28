@@ -1,6 +1,6 @@
-# OpenLLM Guides
+# SciLifeLab OpenLLM Guides
 
-Welcome to the OpenLLM pilot documentation. This site collects guides, announcements, and reference material for users of the SciLifeLab-hosted LLM service at [open-llm.scilifelab.se](https://open-llm.scilifelab.se).
+Welcome to the SciLifeLab OpenLLM pilot documentation. This site collects guides, announcements, and reference material for users of the SciLifeLab-hosted LLM service at [open-llm.scilifelab.se](https://open-llm.scilifelab.se).
 
 ## Start here
 
@@ -8,7 +8,7 @@ Welcome to the OpenLLM pilot documentation. This site collects guides, announcem
 
 ## Announcements
 
-- [OpenLLM Pilot: First Announcement](announcement.md) — pilot kickoff, registration, and what to expect.
+- [SciLifeLab OpenLLM Pilot: First Announcement](announcement.md) — pilot kickoff, registration, and what to expect.
 
 ## Policy
 

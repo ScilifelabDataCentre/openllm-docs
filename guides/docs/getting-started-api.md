@@ -1,4 +1,4 @@
-# OpenLLM pilot: Getting started with the API
+# SciLifeLab OpenLLM pilot: Getting started with the API
 
 **For:** Pilot users of the SciLifeLab-hosted LLM service
 **Service URL:** [https://open-llm.scilifelab.se](https://open-llm.scilifelab.se)
@@ -15,9 +15,44 @@ The primary goal is enabling you to embed LLMs in your research workflows, autom
 
 A chat interface is available as a convenience, but the pilot is not optimized for a ChatGPT-style experience.
 
-For the full use policy, see the [OpenLLM pilot use policy](/use-policy/) document.
+For the full use policy, see the [SciLifeLab OpenLLM pilot use policy](/use-policy/) document.
 
 Your prompts and outputs stay on SciLifeLab-controlled infrastructure in Sweden. We do not train models on your data.
+
+## Choosing a model
+
+The SciLifeLab OpenLLM pilot exposes several open-weight models via the same API endpoint. **`gemma3-27b` is the default and the recommended starting point** for most use cases: it is the largest model we host, accepts both text and images, and produces the highest-quality output across general-purpose tasks (literature triage, structured extraction, drafting, Q&A, summarization).
+
+The smaller and more specialized models are there for cases where `gemma3-27b` is overkill, too slow for your throughput needs, or simply not the right tool for the job.
+
+| Model | Size | When to reach for it |
+| --- | --- | --- |
+| `gemma3-27b` | 27 B | **Default.** General-purpose, multimodal (text + images), highest quality. Use this unless you have a concrete reason not to. |
+| `gemma3-4b` | 4.3 B | High-throughput batch jobs where latency matters more than quality. Also multimodal. Good for simple classification or first-pass screening at scale. |
+| `mistral-7b` | 7.2 B | Lightweight general-purpose alternative (drafting, summarization) when you want faster responses than `gemma3-27b`. |
+| `mistral-nemo-12b` | 12.2 B | Long-context tasks (native 128k window) and multilingual content. A middle ground between the small models and `gemma3-27b`. |
+| `deepseek-r1-8b` | 8.2 B | Reasoning-tuned. Use for tasks that genuinely benefit from explicit step-by-step thinking: math, logic, planning, multi-step analysis. Trades latency for stronger reasoning. |
+| `deepseek-coder-6.7b` | 6.7 B | Code-focused. Good for code generation, completion, and refactoring when you want a model trained specifically for programming. |
+
+A few rules of thumb:
+
+- **Start with `gemma3-27b`.** If it works, ship it.
+- **Switch to a smaller model only if you have a concrete reason**: latency, throughput, or compute cost. On most tasks, smaller models will produce noticeably lower-quality output.
+- **Use `deepseek-r1-8b` only when you actually need reasoning.** For extraction or classification, a larger general model is usually both faster and more accurate.
+- **`deepseek-coder-6.7b` is narrow by design.** For code tasks embedded in broader workflows (e.g. "explain this function and then write a test for it"), `gemma3-27b` is often the better pick.
+
+Switching models in existing code is just a parameter change:
+
+```python
+response = client.chat.completions.create(
+    model="deepseek-r1-8b",  # was "gemma3-27b"
+    messages=[...],
+)
+```
+
+You can list the exact model identifiers available at any given time by querying `/api/models`.
+
+We will consider adding further models during the pilot based on what users actually need, if there is a specific open-weight model you would like access to, let us know at [serve@scilifelab.se](mailto:serve@scilifelab.se).
 
 ## Get your API key
 
@@ -353,7 +388,7 @@ These are practical starting points, not exhaustive. The common thread is that a
 - **Protocol and methods drafting.** Given a set of parameters (organism, assay type, reagents, equipment), the API can draft a first version of a methods section or standard operating procedure. The output still needs expert review, but it saves time on the boilerplate.
 - **Translation and reformatting across formats.** Convert code between languages (R to Python), reformat data descriptions for repository submissions (e.g. GEO, ArrayExpress metadata), or translate abstracts for multilingual dissemination.
 
-These examples are the simplest form of LLM integration: one script, one API call per item, no tool use. For more advanced use cases where the LLM calls external tools (PubMed, UniProt, ChEMBL), orchestrates multi-step reasoning, or acts autonomously — what the field calls AI agents — see the [Going further: AI agents and automation](#going-further-ai-agents-and-automation) section below.
+These examples are the simplest form of LLM integration: one script, one API call per item, no tool use. For more advanced use cases where the LLM calls external tools (PubMed, UniProt, ChEMBL), orchestrates multi-step reasoning, or acts autonomously — what the field calls AI agents; see the [Going further: AI agents and automation](#going-further-ai-agents-and-automation) section below.
 
 ## Tips for getting good results
 
@@ -405,7 +440,7 @@ Need help getting started? Email [serve@scilifelab.se](mailto:serve@scilifelab.s
 
 ## Links and references
 
-### The OpenLLM service
+### The SciLifeLab OpenLLM service
 
 | Resource | URL |
 | --- | --- |
@@ -427,7 +462,7 @@ Need help getting started? Email [serve@scilifelab.se](mailto:serve@scilifelab.s
 | Tool | What it is | Link |
 | --- | --- | --- |
 | VS Code | Free, open-source code editor by Microsoft. Most popular editor for Python development. | [code.visualstudio.com](https://code.visualstudio.com/) |
-| Continue | Open-source AI code assistant extension for VS Code. Supports custom OpenAI-compatible endpoints like our OpenLLM service. | [continue.dev](https://www.continue.dev/) |
+| Continue | Open-source AI code assistant extension for VS Code. Supports custom OpenAI-compatible endpoints like our SciLifeLab OpenLLM service. | [continue.dev](https://www.continue.dev/) |
 | Cursor | AI-first code editor built on VS Code. Supports custom API endpoints in its settings. | [cursor.com](https://www.cursor.com/) |
 | JupyterLab | Web-based interactive development environment for notebooks. | [jupyter.org](https://jupyter.org/) |
 
