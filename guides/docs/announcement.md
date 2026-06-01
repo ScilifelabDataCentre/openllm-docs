@@ -8,7 +8,7 @@ The short version: if you want to plug an LLM into your research scripts, data p
 
 A few things worth knowing:
 
-- **`gemma3-27b` is the default, but other models will be available.** See the user guide for guidance on when to pick which, and let us know if there's another open-weight model you'd like us to consider adding during the pilot.
+- **`gemma3-27b` is the default, but `Qwen3.6-35B-A3B-FP8` is also available.** See the user guide for guidance on when to pick which, and let us know if there's another open-weight model you'd like us to consider adding during the pilot.
 - **For API-based usage primarily:** the pilot is designed for programmatic use. Embed models in your workflows, build agents, run batch jobs. A chat UI exists as a convenience, but we prefer that you explore use cases with APi access.
 - **Your data stays here:** all processing happens on SciLifeLab-controlled infrastructure in Sweden. No third-party providers, no training on your data.
 - **We want to learn from you:** the goal of this pilot is to understand what use cases SciLifeLab-hosted LLMs can realistically support. We'll ask you to complete a short onboarding survey (~3 min) and check in with you twice during the pilot. We also welcome feedback at any time.

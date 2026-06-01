@@ -19,9 +19,16 @@ For the full use policy, see the [SciLifeLab OpenLLM pilot use policy](/use-poli
 
 Your prompts and outputs stay on SciLifeLab-controlled infrastructure in Sweden. We do not train models on your data.
 
-## The model
+## The models
 
-**`gemma3-27b` is the default and the recommended starting point**: it accepts both text and images, and produces high-quality output across general-purpose tasks (literature triage, structured extraction, drafting, Q&A, summarization).
+**`gemma3-27b` is the default and the recommended starting point**: it accepts both text and images, and produces high-quality output across general-purpose tasks (literature triage, structured extraction, drafting, Q&A, summarization). It is a dense model: reliable, well-rounded for everyday work, and strong on multilingual text.
+
+**`Qwen3.6-35B-A3B-FP8` is the specialist for reasoning, coding, and agentic work**: it is a sparse Mixture-of-Experts model (35B total parameters, only 3B active per token), so it reaches near-frontier coding and reasoning performance at a fraction of the inference cost, and the FP8 weights keep the memory footprint low. It is also multimodal (text, image, video), and offers an explicit thinking mode alongside function calling and structured output.
+
+**Which to use**:
+
+- Start with `gemma3-27b` for day-to-day text and image work: summaries, drafting, structured extraction, Q&A, and quick triage. It is the dependable all-rounder.
+- Switch to `Qwen3.6-35B-A3B-FP8` when you need deeper multi-step reasoning, code or repository-scale analysis, tool calling and agentic workflows, or a context window large enough to hold whole documents or codebases.
 
 We will consider adding further models during the pilot based on what users actually need, if there is a specific open-weight model you would like access to, let us know at [serve@scilifelab.se](mailto:serve@scilifelab.se).
 
@@ -61,9 +68,9 @@ name: Local Assistant
 version: 1.0.0
 schema: v1
 models:
-  - name: gemma3-27b
+  - name: qwen3
     provider: openai
-    model: gemma3-27b
+    model: qwen3
     apiBase: https://open-llm.scilifelab.se/api
     apiKey: sk-YOUR-TOKEN
     template: none
@@ -114,7 +121,7 @@ You can ask questions about a note or a combination of notes, edit them using an
 
 8. Fill out the form:
 
-    - **Model name:** `gemma3-27b`
+    - **Model name:** `qwen3`
     - **Provider:** OpenAI Format
     - **Base URL:** `https://open-llm.scilifelab.se/api`
     - **API key:** `sk-*` — take it from Open WebUI
@@ -148,7 +155,7 @@ from langchain_openai import ChatOpenAI
 llm = ChatOpenAI(
     base_url="https://openllm.scilifelab.se/api",
     api_key="<change-it-to-sk-your-api-key>",
-    model="gemma3:latest",
+    model="qwen3",
 )
 response = llm.invoke("What is CRISPR-Cas9?")
 print(response.content)
@@ -162,7 +169,7 @@ from llama_index.llms.openai_like import OpenAILike
 llm = OpenAILike(
     api_base="https://openllm.scilifelab.se/api",
     api_key="<change-it-to-sk-your-api-key>",
-    model="gemma3:latest",
+    model="qwen3",
     is_chat_model=True,
 )
 response = llm.complete("What is CRISPR-Cas9?")
@@ -199,7 +206,7 @@ curl https://openllm.scilifelab.se/api/chat/completions \
   -H "Authorization: Bearer <change-it-to-sk-your-api-key>" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "gemma3:latest",
+    "model": "qwen3",
     "messages": [{"role": "user", "content": "What is mass spectrometry?"}],
     "max_tokens": 300
   }'
@@ -223,7 +230,7 @@ client = OpenAI(
     api_key="<change-it-to-sk-your-api-key>",
 )
 response = client.chat.completions.create(
-    model="gemma3:latest",
+    model="qwen3",
     messages=[
         {"role": "user", "content": "What is mass spectrometry?"}
     ],
@@ -244,7 +251,7 @@ response = requests.post(
         "Content-Type": "application/json",
     },
     json={
-        "model": "gemma3:latest",
+        "model": "qwen3",
         "messages": [{"role": "user", "content": "What is mass spectrometry?"}],
         "max_tokens": 300,
     },
@@ -272,7 +279,7 @@ abstracts = [
 ]
 for i, abstract in enumerate(abstracts):
     response = client.chat.completions.create(
-        model="gemma3:latest",
+        model="qwen3",
         messages=[
             {
                 "role": "system",
@@ -302,7 +309,7 @@ Treatment with 50mg metformin twice daily showed a 23% reduction
 in fasting glucose levels over 12 weeks.
 """
 response = client.chat.completions.create(
-    model="gemma3:latest",
+    model="qwen3",
     messages=[
         {
             "role": "system",
@@ -332,7 +339,7 @@ client = OpenAI(
 genes = ["BRCA1", "TP53", "ACTB", "GAPDH", "EGFR"]
 for gene in genes:
     response = client.chat.completions.create(
-        model="gemma3:latest",
+        model="qwen3",
         messages=[
             {
                 "role": "user",
