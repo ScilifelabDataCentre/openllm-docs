@@ -17,17 +17,19 @@ RUN cd use-policy && mkdocs build --strict --site-dir /site/use-policy
 COPY guides/ ./guides/
 RUN cd guides && mkdocs build --strict --site-dir /site/guides
 
-# ---- Runtime stage: nginx serving both subpaths ----
-FROM nginx:1.27-alpine
+# ---- Runtime stage: nginx serving both subpaths as non-root ----
+FROM nginxinc/nginx-unprivileged:1.27-alpine
 
 # Copy built sites into the web root
-COPY --from=builder /site/use-policy /usr/share/nginx/html/use-policy
-COPY --from=builder /site/guides     /usr/share/nginx/html/guides
+COPY --from=builder --chown=nginx:nginx /site/use-policy /usr/share/nginx/html/use-policy
+COPY --from=builder --chown=nginx:nginx /site/guides     /usr/share/nginx/html/guides
 
 # Replace default nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+USER nginx
+
+EXPOSE 8080
 
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD wget -q -O- http://localhost/use-policy/ > /dev/null || exit 1
+  CMD wget -q -O- http://localhost:8080/use-policy/ > /dev/null || exit 1

@@ -46,14 +46,14 @@ Or without compose:
 
 ```bash
 docker build -t openllm-docs .
-docker run --rm -p 8000:80 openllm-docs
+docker run --rm -p 8000:8080 openllm-docs
 ```
 
 Locally, both sites serve from `/`, not from `/use-policy/` or `/guides/`. The subpaths only exist inside the Docker image.
 
 ## Deploying alongside Open WebUI
 
-The Docker image listens on port 80 and serves `/use-policy/` and `/guides/`. The host's reverse proxy (the same one fronting Open WebUI) should route those two paths to this container, and everything else to Open WebUI.
+The Docker image listens on port 8080 and serves `/use-policy/` and `/guides/`. The host's reverse proxy (the same one fronting Open WebUI) should route those two paths to this container, and everything else to Open WebUI.
 
 ### nginx on the host
 
