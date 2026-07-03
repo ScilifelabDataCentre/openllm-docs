@@ -30,6 +30,3 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 USER nginx
 
 EXPOSE 8080
-
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD wget -q -O- http://localhost:8080/use-policy/ > /dev/null || exit 1
