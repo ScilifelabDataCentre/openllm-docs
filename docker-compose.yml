@@ -4,5 +4,5 @@ services:
     image: openllm-docs:latest
     container_name: openllm-docs
     ports:
-      - "8000:80"
+      - "8000:8080"
     restart: unless-stopped
