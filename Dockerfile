@@ -27,6 +27,7 @@ COPY --from=builder --chown=nginx:nginx /site/guides     /usr/share/nginx/html/g
 # Replace default nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-USER nginx
+# Use a numeric UID/GID so Kubernetes can verify runAsNonRoot.
+USER 101:101
 
 EXPOSE 8080
