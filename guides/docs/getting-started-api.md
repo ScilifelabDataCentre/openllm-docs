@@ -356,6 +356,114 @@ for gene in genes:
 
 ## Ideas: what researchers can use LLM APIs for
 
+## 1. Use scientific tools with ToolUniverse
+
+[ToolUniverse](https://github.com/mims-harvard/ToolUniverse) is an open-source package that gives scripts and LLM workflows access to scientific tools and databases such as PubMed, UniProt, ChEMBL, ClinicalTrials.gov, and AlphaFold.
+
+### Install
+
+In a Python environment:
+
+```bash
+pip install tooluniverse
+```
+
+Try a database tool first. This does not use an LLM:
+
+```bash
+tu run PubMed_search_articles '{"query":"CRISPR","max_results":1}'
+```
+
+Result:
+
+```bash
+{
+  "status": "success",
+  "data": [
+    {
+      "pmid": "42643272",
+      "title": "Physical activity stimulates neurogenesis via sensory neuron activity in postembryonic zebrafish.",
+      "authors": [
+        "Sherlock S",
+        "Appel L",
+        "Hall Z",
+        "Phan A"
+      ],
+      "author_count": 4,
+      "authors_truncated": false,
+      "journal": "iScience",
+      "pub_date": "2026 Sep 18",
+      "pub_year": "2026",
+      "doi": "10.1016/j.isci.2026.117207",
+      "pmcid": "PMC13503103",
+      "article_type": "Journal Article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42643272/",
+      "doi_url": "https://doi.org/10.1016/j.isci.2026.117207",
+      "pmc_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13503103/"
+    }
+  ],
+  "metadata": {
+    "count": 1,
+    "total": 70279,
+    "query": "CRISPR",
+    "source": "PubMed"
+  }
+}
+```
+
+### Use SciLifeLab OpenLLM with ToolUniverse
+
+Use the API key you created earlier in this guide. Replace `<MODEL_NAME>` with a chat model returned by `/api/models`.
+
+```bash
+export OPENAI_API_KEY="<change-it-to-sk-your-api-key>"
+export OPENAI_BASE_URL="https://openllm.scilifelab.se/api"
+export TOOLUNIVERSE_LLM_CONFIG_MODE="env_override"
+export TOOLUNIVERSE_LLM_DEFAULT_PROVIDER="OPENAI"
+export TOOLUNIVERSE_LLM_MODEL_DEFAULT="<MODEL_NAME>"
+export AGENTIC_TOOL_FALLBACK_CHAIN='[]'
+```
+
+The last line prevents ToolUniverse from falling back to external LLM providers if the SciLifeLab endpoint is unavailable.
+
+Test an LLM-powered ToolUniverse tool:
+
+```bash
+tu run ScientificTextSummarizer '{"text":"Metformin lowers hepatic glucose output.","summary_length":"20","focus_area":"mechanism"}'
+```
+
+Result:
+
+```bash
+{
+  "success": true,
+  "result": "Metformin reduces liver glucose production by activating AMPK, inhibiting gluconeogenesis, and improving insulin sensitivity.",
+  "metadata": {
+    "prompt_used": "You are a biomedical expert. Please summarize the following biomedical text in 20 words, focusing on mechanism:\n\nMetformin lowers hepatic glucose output.\n\nProvide a clear, concise summary that captures the most important information.",
+    "input_arguments": {
+      "text": "Metformin lowers hepatic glucose output.",
+      "summary_length": "20",
+      "focus_area": "mechanism"
+    },
+    "model_info": {
+      "api_type": "OPENAI",
+      "model_id": "Qwen3-235B-A22B",
+      "temperature": 0.2
+    },
+    "execution_time_seconds": 2.540479,
+    "timestamp": "2026-08-26T14:31:46.316332"
+  }
+}
+```
+
+### Simple use cases
+
+- Search PubMed or other scientific databases from a script, then summarize or screen the results.
+- Combine information from tools such as UniProt, ChEMBL, or ClinicalTrials.gov in a research workflow.
+
+For more examples, see the [ToolUniverse documentation](https://zitniklab.hms.harvard.edu/ToolUniverse/) and the [example research workflows in the ToolUniverse repository](https://github.com/mims-harvard/ToolUniverse/tree/main/skills).
+
+
 ![AI agents research loop](images/ideas.png)
 
 These are practical starting points, not exhaustive. The common thread is that an LLM accessed via API can handle repetitive tasks that would otherwise take hours of manual work. None of these require building a full application. A short Python script calling the API is often enough.
