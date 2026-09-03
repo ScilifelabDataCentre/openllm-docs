@@ -464,6 +464,83 @@ Result:
 For more examples, see the [ToolUniverse documentation](https://zitniklab.hms.harvard.edu/ToolUniverse/) and the [example research workflows in the ToolUniverse repository](https://github.com/mims-harvard/ToolUniverse/tree/main/skills).
 
 
+## 2. Use scientific tools with Biomni agent
+
+
+
+### Biomni Bridge
+
+![Figure: Biomni Bridge](images/screenshot-Biomni-Bridge.png)
+
+[Biomni Bridge](https://pypi.org/project/biomni-bridge/) lets you connect Biomni to the OpenLLM API through a simple Gradio interface and a reproducible Docker environment.
+
+It simplifies the setup and makes Biomni easier to get started with. For full details, see the [Biomni Bridge documentation](https://github.com/anondo1969/biomni-bridge/blob/main/README.md).
+
+For a quick start, follow one of the options below.
+
+### Install from PyPI
+
+Biomni Bridge requires **Python 3.11**.
+
+Create and activate a virtual environment:
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+
+python -m pip install --upgrade pip
+python -m pip install biomni-bridge
+```
+
+For a basic setup, no environment variables are required. Start Biomni Bridge with:
+
+```bash
+biomni-bridge
+```
+
+Then open:
+
+```text
+http://127.0.0.1:7860
+```
+
+Enter the **OpenLLM base URL** and **API key** in the UI, then connect and select a model.
+
+### Quick start with Docker
+
+Create local directories for data and output:
+
+```bash
+mkdir -p data output
+```
+
+Run the published image:
+
+```bash
+docker run --rm \
+  --security-opt=no-new-privileges:true \
+  --cap-drop=ALL \
+  -p 127.0.0.1:7860:7860 \
+  -v "$(pwd)/data:/data" \
+  -v "$(pwd)/output:/output" \
+  ghcr.io/anondo1969/biomni-bridge:latest
+```
+
+Then open:
+
+```text
+http://127.0.0.1:7860
+```
+
+Enter the **OpenLLM base URL** and **API key**, click **Connect**, choose a model, and run a task.
+
+### Biomni Data Lake
+
+To use the Biomni Data Lake, see the [Data Lake documentation](https://github.com/anondo1969/biomni-bridge/blob/main/README.md#biomni-data).
+
+
+
+
 ![AI agents research loop](images/ideas.png)
 
 These are practical starting points, not exhaustive. The common thread is that an LLM accessed via API can handle repetitive tasks that would otherwise take hours of manual work. None of these require building a full application. A short Python script calling the API is often enough.
