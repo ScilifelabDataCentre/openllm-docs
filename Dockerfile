@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.6
+# syntax=docker/dockerfile:1.27
 
 # ---- Build stage: produce static HTML for both sites ----
 FROM python:3.12-slim AS builder
