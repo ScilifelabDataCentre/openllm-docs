@@ -18,7 +18,7 @@ COPY guides/ ./guides/
 RUN cd guides && mkdocs build --strict --site-dir /site/guides
 
 # ---- Runtime stage: nginx serving both subpaths as non-root ----
-FROM nginxinc/nginx-unprivileged:1.27-alpine
+FROM nginxinc/nginx-unprivileged:1.31-alpine
 
 # Copy built sites into the web root
 COPY --from=builder --chown=nginx:nginx /site/use-policy /usr/share/nginx/html/use-policy
