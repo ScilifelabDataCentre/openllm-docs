@@ -79,7 +79,7 @@ To obtain your API key, follow the instructions in the [Getting Started with the
 4. Copy and save the key securely. It starts with `sk-`
 
 !!! note
-    If you do not see the option to create an API key, ask the pilot team ([serve@scilifelab.se](mailto:serve@scilifelab.se)) to add you to the Pilot Users group.
+    If you do not see the option to create an API key, ask the pilot team ([open-llm@scilifelab.se](mailto:open-llm@scilifelab.se)) to add you to the Pilot Users group.
 
     Your API key expires after 4 weeks. Regenerate it when it stops working.
 
@@ -210,4 +210,4 @@ If Qwen Code responds with an explanation of the function, your configuration is
 - **Slow responses**: This is a pilot on shared infrastructure, not a production service. Response times will vary depending on load.
 - **Connection timeout**: The service may be temporarily down for maintenance. Try again in a few minutes.
 
-For additional support, refer to the [Troubleshooting section](getting-started-api.md#troubleshooting) in the Getting Started guide or contact [serve@scilifelab.se](mailto:serve@scilifelab.se).
+For additional support, refer to the [Troubleshooting section](getting-started-api.md#troubleshooting) in the Getting Started guide or contact [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se).

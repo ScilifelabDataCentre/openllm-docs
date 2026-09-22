@@ -113,4 +113,4 @@ If the command fails, check the following:
 - **404 error:** Check that `ANTHROPIC_BASE_URL` ends in `/api`, not `/api/v1`.
 - **Slow responses:** The pilot runs on shared infrastructure, so response times vary with service load.
 
-For account and API-key help, see [Getting started with the API](getting-started-api.md) or contact [serve@scilifelab.se](mailto:serve@scilifelab.se).
+For account and API-key help, see [Getting started with the API](getting-started-api.md) or contact [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se).

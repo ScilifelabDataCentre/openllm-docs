@@ -18,4 +18,4 @@ The full use policy is hosted as a separate document: see [open-llm.scilifelab.s
 
 ## Get in touch
 
-Questions, feedback, or trouble? Email [serve@scilifelab.se](mailto:serve@scilifelab.se).
+Questions, feedback, or trouble? Email [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se).
