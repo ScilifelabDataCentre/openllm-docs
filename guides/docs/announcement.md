@@ -21,7 +21,7 @@ In order to join, you need to do two things:
 1. Register here: [https://open-llm.scilifelab.se/](https://open-llm.scilifelab.se/)
 2. Fill out out this onboarding survey (3 mins) here: [https://scilifelab.typeform.com/to/xF9XFHsr](https://scilifelab.typeform.com/to/xF9XFHsr)
 
-We will approve registrations once both are complete within 24 hours, and you can grab your API key from **Settings → Account → API Keys**. A user guide with setup instructions, code examples, and the use policy will be shared with you upon registration. If you run into any issues, reach out to us at [serve@scilifelab.se](mailto:serve@scilifelab.se).
+We will approve registrations once both are complete within 24 hours, and you can grab your API key from **Settings → Account → API Keys**. A user guide with setup instructions, code examples, and the use policy will be shared with you upon registration. If you run into any issues, reach out to us at [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se).
 
 !!! warning "Heads up"
     Just a quick heads-up as we kick off the pilot: we do not have any agreements (such as Service Level Agreements, SLAs) in place, and uptime or continuous availability is not guaranteed at this stage. Please avoid sending any human sensitive data to the service.

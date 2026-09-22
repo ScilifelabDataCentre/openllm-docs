@@ -5,6 +5,8 @@ Welcome to the SciLifeLab OpenLLM pilot documentation. This site collects guides
 ## Start here
 
 - [Getting started with the API](getting-started-api.md) — set up your API key, connect popular tools (VS Code/Continue, Obsidian, LangChain, LlamaIndex), and make your first request with `curl` or Python.
+- [Using the API with QwenCode](using-api-coding-agents.md)
+- [Using the API with ClaudeCode](using-api-with-claudecode.md)
 
 ## Announcements
 
@@ -16,4 +18,4 @@ The full use policy is hosted as a separate document: see [open-llm.scilifelab.s
 
 ## Get in touch
 
-Questions, feedback, or trouble? Email [serve@scilifelab.se](mailto:serve@scilifelab.se).
+Questions, feedback, or trouble? Email [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se).

@@ -48,4 +48,4 @@ We may collect anonymized usage metrics (request counts, token volumes, latency)
 
 ## Feedback
 
-Your input is the most valuable output of this pilot. Please share feedback, use cases, issues, and ideas at [serve@scilifelab.se](mailto:serve@scilifelab.se) or through the channels provided to you when you joined the pilot.
+Your input is the most valuable output of this pilot. Please share feedback, use cases, issues, and ideas at [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se) or through the channels provided to you when you joined the pilot.
