@@ -13,6 +13,8 @@ Please note that we will be considering adding or replacing models during the pi
 
 **`Mistral-Large-3-675B-Instruct-2512-NVFP4`**: A large general-purpose multimodal Mixture-of-Experts model with 41B active parameters, 675B total parameters, and a 2.5B vision encoder. Useful for advanced chat, long documents, scientific work, RAG, agents, tool use, and coding tasks.
 
+**Our Recommendation:** Advanced chat and long documents
+
 - **Context Length: 65536**
 
 - **Precision: NVFP4**
@@ -24,7 +26,10 @@ Please note that we will be considering adding or replacing models during the pi
 ---
 
 
-**`Qwen3.8-27B`**: A 27B compact general-purpose multimodal model that understands text, images, and video. Useful for coding, reasoning, complex tasks, agent workflows, research, document/image understanding, and everyday chat. 
+**`Qwen3.8-27B`**: A 27B compact general-purpose multimodal model that understands text, images, and video. Useful for coding, reasoning, complex tasks, agent workflows, research, document/image understanding, and everyday chat.
+
+**Our Recommendation:** AI-assisted coding.
+
 
 - **Context Length: 262144**
 
@@ -37,7 +42,9 @@ Please note that we will be considering adding or replacing models during the pi
 ---
 
 
-**`voxtral-small-24b`**: A state-of-the-art audio input model that provides best-in-class text performance. Useful for speech transcription, translation and audio understanding. 
+**`voxtral-small-24b`**: A state-of-the-art audio input model that provides best-in-class text performance. Useful for speech transcription, translation and audio understanding.
+
+**Our Recommendation:** Any speech to text work, transcription, summarization etc.
 
 - **Context Length: 32768**
 
@@ -51,7 +58,10 @@ Please note that we will be considering adding or replacing models during the pi
 ---
 
 
-**`Qwen3-235B-A22B`**: A large Mixture-of-Experts model with 235B total parameters and 22B active parameters. Useful for complex instructions, coding, research, long documents, tool use, reasoning, and long-context tasks. 
+**`Qwen3-235B-A22B`**: A large Mixture-of-Experts model with 235B total parameters and 22B active parameters. Useful for complex instructions, coding, research, long documents, tool use, reasoning, and long-context tasks.
+
+**Our Recommendation:** Researchand reasoning.
+ 
 
 - **Context Length: 131072**
 
@@ -65,6 +75,9 @@ Please note that we will be considering adding or replacing models during the pi
 
 **`gemma3-27b`**: A 27B general-purpose multimodal model from Google. Useful for general chat, reasoning, summarization, multilingual tasks, image understanding, and document analysis.
 
+**Our Recommendation:** Multilingual tasks.
+
+
 - **Context Length: 131072**
 
 - **Precision: BF16**
@@ -76,6 +89,8 @@ Please note that we will be considering adding or replacing models during the pi
 ---
 
 **`bge-m3`**: A multilingual text embedding model that performs dense, sparse, and multi-vector retrieval simultaneously. Useful for retrieval-augmented Generation (RAG), semantic and keyword Search, and knowledge management. Can not be used in the chat interface.
+
+**Our Recommendation:** retrieval-augmented Generation (RAG) and natural language processing (NLP) tasks.
 
 - **Context Length: 8192**
 
