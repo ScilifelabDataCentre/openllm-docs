@@ -33,6 +33,7 @@ theme:
 nav:
   - Home: index.md
   - Getting started with the API: getting-started-api.md
+  - Models: models.md
   - Announcements:
       - First announcement: announcement.md
 
