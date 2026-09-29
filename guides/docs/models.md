@@ -42,22 +42,6 @@ Please note that we will be considering adding or replacing models during the pi
 ---
 
 
-**`voxtral-small-24b`**: A state-of-the-art audio input model that provides best-in-class text performance. Useful for speech transcription, translation and audio understanding.
-
-**Our Recommendation:** Any speech to text work, transcription, summarization etc.
-
-- **Context Length: 32768**
-
-- **Precision: BF16**
-
-- **[Release Date](https://arxiv.org/abs/2507.13264):** 17 July, 2025 
-
-- **[Official Site](https://huggingface.co/mistralai/Voxtral-Small-24B-2507)**
-
-
----
-
-
 **`Qwen3-235B-A22B`**: A large Mixture-of-Experts model with 235B total parameters and 22B active parameters. Useful for complex instructions, coding, research, long documents, tool use, reasoning, and long-context tasks.
 
 **Our Recommendation:** Researchand reasoning.
