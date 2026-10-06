@@ -34,6 +34,7 @@ nav:
   - Home: index.md
   - Getting started with the API: getting-started-api.md
   - Models: models.md
+  - How OpenLLM is set up: openllm-setup-advanced.md
   - Announcements:
       - First announcement: announcement.md
 
