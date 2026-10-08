@@ -15,7 +15,7 @@ Before you begin, you need:
 Create an API key in Open WebUI under **Settings -> Account -> API Keys**. Then list the model IDs available to your account:
 
 ```bash
-export OPENWEBUI_URL="https://open-llm.scilifelab.se"
+export OPENWEBUI_URL="https://openllm.scilifelab.se"
 export OPENWEBUI_API_KEY="sk-your-api-key-here"
 
 curl -s \
@@ -68,7 +68,7 @@ To avoid exporting variables in every new shell, add the configuration to `~/.cl
 ```json
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "https://open-llm.scilifelab.se/api",
+    "ANTHROPIC_BASE_URL": "https://openllm.scilifelab.se/api",
     "ANTHROPIC_AUTH_TOKEN": "sk-TOKEN",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "Qwen3-235B-A22B",
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "Qwen3-235B-A22B",
@@ -113,4 +113,4 @@ If the command fails, check the following:
 - **404 error:** Check that `ANTHROPIC_BASE_URL` ends in `/api`, not `/api/v1`.
 - **Slow responses:** The pilot runs on shared infrastructure, so response times vary with service load.
 
-For account and API-key help, see [Getting started with the API](getting-started-api.md) or contact [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se).
+For account and API-key help, see [Getting started with the API](getting-started-api.md) or contact [openllm@scilifelab.se](mailto:openllm@scilifelab.se).

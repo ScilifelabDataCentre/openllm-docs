@@ -1,8 +1,8 @@
 # SciLifeLab OpenLLM pilot: Getting started with the API
 
 **For:** Pilot users of the SciLifeLab-hosted LLM service
-**Service URL:** [https://open-llm.scilifelab.se](https://open-llm.scilifelab.se)
-**Contact:** [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se)
+**Service URL:** [https://openllm.scilifelab.se](https://openllm.scilifelab.se)
+**Contact:** [openllm@scilifelab.se](mailto:openllm@scilifelab.se)
 
 ## What this service is
 
@@ -30,19 +30,19 @@ Your prompts and outputs stay on SciLifeLab-controlled infrastructure in Sweden.
 - Start with `gemma3-27b` for day-to-day text and image work: summaries, drafting, structured extraction, Q&A, and quick triage. It is the dependable all-rounder.
 - Switch to `Qwen3.6-35B-A3B-FP8` when you need deeper multi-step reasoning, code or repository-scale analysis, tool calling and agentic workflows, or a context window large enough to hold whole documents or codebases.
 
-We will consider adding further models during the pilot based on what users actually need, if there is a specific open-weight model you would like access to, let us know at [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se).
+We will consider adding further models during the pilot based on what users actually need, if there is a specific open-weight model you would like access to, let us know at [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
 
 ## Get your API key
 
 ![API key settings in Open WebUI](images/api-key.png)
 
-1. Log in to [https://open-llm.scilifelab.se](https://open-llm.scilifelab.se)
+1. Log in to [https://openllm.scilifelab.se](https://openllm.scilifelab.se)
 2. Go to **Settings → Account → API Keys**
 3. Click **Create new API key**
 4. Copy and save the key securely. It starts with `sk-`
 
 !!! note
-    If you do not see the option to create an API key, ask the pilot team ([open-llm@scilifelab.se](mailto:open-llm@scilifelab.se)) to add you to the Pilot Users group.
+    If you do not see the option to create an API key, ask the pilot team ([openllm@scilifelab.se](mailto:openllm@scilifelab.se)) to add you to the Pilot Users group.
 
     Your API key expires after 4 weeks. Regenerate it when it stops working.
 
@@ -71,7 +71,7 @@ models:
   - name: qwen3
     provider: openai
     model: qwen3
-    apiBase: https://open-llm.scilifelab.se/api
+    apiBase: https://openllm.scilifelab.se/api
     apiKey: sk-YOUR-TOKEN
     template: none
     defaultCompletionOptions:
@@ -123,7 +123,7 @@ You can ask questions about a note or a combination of notes, edit them using an
 
     - **Model name:** `qwen3`
     - **Provider:** OpenAI Format
-    - **Base URL:** `https://open-llm.scilifelab.se/api`
+    - **Base URL:** `https://openllm.scilifelab.se/api`
     - **API key:** `sk-*` — take it from Open WebUI
     - **Tick** CORS
 
@@ -133,7 +133,7 @@ You can ask questions about a note or a combination of notes, edit them using an
 
     - **Model name:** `bge-m3:latest`
     - **Provider:** OpenAI Format
-    - **Base URL:** `https://open-llm.scilifelab.se/api`
+    - **Base URL:** `https://openllm.scilifelab.se/api`
     - **API key:** `sk-*` — take it from Open WebUI
     - **Tick** CORS
 
@@ -584,9 +584,9 @@ The SciLifeLab Data Centre runs a recurring event series called *Tools for AI/ML
 - **"Unauthorized" or 401 error:** Your API key is invalid or expired. Regenerate it in Open WebUI (**Settings → Account → API Keys**).
 - **"Model not found" error:** The model name in your request doesn't match what's available. Check `/api/models` for the exact name.
 - **Slow responses:** This is a pilot on shared infrastructure, not a production service. Response times will vary depending on load. If latency matters for your workflow, try reducing `max_tokens` or breaking requests into smaller chunks.
-- **Connection timeout:** The service may be temporarily down for maintenance or model changes. Try again in a few minutes. If it persists, email [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se).
+- **Connection timeout:** The service may be temporarily down for maintenance or model changes. Try again in a few minutes. If it persists, email [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
 
-Need help getting started? Email [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se) or reach out on the AI network Slack channel.
+Need help getting started? Email [openllm@scilifelab.se](mailto:openllm@scilifelab.se) or reach out on the AI network Slack channel.
 
 ## Important reminders
 
@@ -594,7 +594,7 @@ Need help getting started? Email [open-llm@scilifelab.se](mailto:open-llm@scilif
     - This is a pilot service, not production. No guaranteed uptime, latency, or model availability.
     - Models and configurations may change during the pilot.
     - Do not process patient data or data classified as sensitive.
-    - Your feedback is the most valuable output of this pilot. Share it at [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se).
+    - Your feedback is the most valuable output of this pilot. Share it at [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
 
 ## Links and references
 
@@ -602,9 +602,9 @@ Need help getting started? Email [open-llm@scilifelab.se](mailto:open-llm@scilif
 
 | Resource | URL |
 | --- | --- |
-| Open WebUI (login, API keys, chat) | [https://open-llm.scilifelab.se](https://open-llm.scilifelab.se) |
+| Open WebUI (login, API keys, chat) | [https://openllm.scilifelab.se](https://openllm.scilifelab.se) |
 | Use policy | Available from the pilot team on Confluence |
-| Feedback and support | [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se) |
+| Feedback and support | [openllm@scilifelab.se](mailto:openllm@scilifelab.se) |
 
 ### Python libraries
 
