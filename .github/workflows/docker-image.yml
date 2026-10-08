@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - AIS-106-add-about-page
 
 permissions:
   contents: read
