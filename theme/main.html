@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block htmltitle %}
+  {% if page and page.url == "about/" %}
+    <title>SciLifeLab OpenLLM</title>
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
+
+{% block site_meta %}
+  {{ super() }}
+  {% if page and page.url == "about/" %}
+    <base href="/guides/about/">
+  {% endif %}
+{% endblock %}
+
+{% block header %}
+  {% include "partials/openllm-navbar.html" %}
+{% endblock %}

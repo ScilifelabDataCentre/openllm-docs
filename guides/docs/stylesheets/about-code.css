@@ -1,0 +1,42 @@
+.about-hero h1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.about-hero p {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.about-hero .about-code {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  width: 100%;
+  margin: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  overflow-x: auto;
+  border: 1px solid #1d5a61;
+  border-radius: 0.75rem;
+  background: #062a2e;
+  color: #e6f2f3;
+  font-family: var(--md-code-font-family);
+  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+  line-height: 1.7;
+}
+
+.about-hero .about-code code,
+.about-hero .about-code span {
+  background: transparent !important;
+  color: #e6f2f3 !important;
+}
+
+@media screen and (max-width: 44.9375em) {
+  .about-hero h1,
+  .about-hero p,
+  .about-hero .about-code {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .about-hero .about-code { margin-top: 1rem; }
+}

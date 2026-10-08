@@ -9,6 +9,9 @@ WORKDIR /build
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Shared Material override used by both documentation sites.
+COPY theme/ ./theme/
+
 # Build use-policy site -> /site/use-policy
 COPY use-policy/ ./use-policy/
 RUN cd use-policy && mkdocs build --strict --site-dir /site/use-policy

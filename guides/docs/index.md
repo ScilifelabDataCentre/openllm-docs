@@ -1,6 +1,6 @@
 # SciLifeLab OpenLLM Guides
 
-Welcome to the SciLifeLab OpenLLM pilot documentation. This site collects guides, announcements, and reference material for users of the SciLifeLab-hosted LLM service at [open-llm.scilifelab.se](https://open-llm.scilifelab.se).
+Welcome to the SciLifeLab OpenLLM pilot documentation. This site collects guides, announcements, and reference material for users of the SciLifeLab-hosted LLM service at [openllm.scilifelab.se](https://openllm.scilifelab.se).
 
 ## Start here
 
@@ -14,8 +14,8 @@ Welcome to the SciLifeLab OpenLLM pilot documentation. This site collects guides
 
 ## Policy
 
-The full use policy is hosted as a separate document: see [open-llm.scilifelab.se/use-policy/](/use-policy/).
+The full use policy is hosted as a separate document: see [openllm.scilifelab.se/use-policy/](/use-policy/).
 
 ## Get in touch
 
-Questions, feedback, or trouble? Email [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se).
+Questions, feedback, or trouble? Email [openllm@scilifelab.se](mailto:openllm@scilifelab.se).

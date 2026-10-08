@@ -73,13 +73,13 @@ qwen
 
 To obtain your API key, follow the instructions in the [Getting Started with the API](getting-started-api.md#get-your-api-key) guide:
 
-1. Log in to [https://open-llm.scilifelab.se](https://open-llm.scilifelab.se)
+1. Log in to [https://openllm.scilifelab.se](https://openllm.scilifelab.se)
 2. Go to **Settings → Account → API Keys**
 3. Click **Create new API key**
 4. Copy and save the key securely. It starts with `sk-`
 
 !!! note
-    If you do not see the option to create an API key, ask the pilot team ([open-llm@scilifelab.se](mailto:open-llm@scilifelab.se)) to add you to the Pilot Users group.
+    If you do not see the option to create an API key, ask the pilot team ([openllm@scilifelab.se](mailto:openllm@scilifelab.se)) to add you to the Pilot Users group.
 
     Your API key expires after 4 weeks. Regenerate it when it stops working.
 
@@ -105,7 +105,7 @@ Once you have your API key, you can configure Qwen Code to use the SciLifeLab Op
       {
         "id": "Qwen3-235B-A22B",
         "name": "Qwen3-235B-A22B",
-        "baseUrl": "https://open-llm.scilifelab.se/api",
+        "baseUrl": "https://openllm.scilifelab.se/api",
         "envKey": "QWEN_CUSTOM_API_KEY_OPENAI_HTTPS_OPEN_LLM_SCILIFELAB_SE_V1_42C9F93C6043",
         "generationConfig": {
           "contextWindowSize": 65536,
@@ -129,7 +129,7 @@ Once you have your API key, you can configure Qwen Code to use the SciLifeLab Op
   },
   "model": {
     "name": "Qwen3-235B-A22B",
-    "baseUrl": "https://open-llm.scilifelab.se/api"
+    "baseUrl": "https://openllm.scilifelab.se/api"
   },
   "$version": 4
 }
@@ -145,7 +145,7 @@ To add a different model to your configuration, you need to add a new object to 
 {
   "id": "gemma3-27b",
   "name": "gemma3-27b",
-  "baseUrl": "https://open-llm.scilifelab.se/api",
+  "baseUrl": "https://openllm.scilifelab.se/api",
   "envKey": "QWEN_CUSTOM_API_KEY_OPENAI_HTTPS_OPEN_LLM_SCILIFELAB_SE_V1_42C9F93C6043",
   "generationConfig": {
     "modalities": {
@@ -210,4 +210,4 @@ If Qwen Code responds with an explanation of the function, your configuration is
 - **Slow responses**: This is a pilot on shared infrastructure, not a production service. Response times will vary depending on load.
 - **Connection timeout**: The service may be temporarily down for maintenance. Try again in a few minutes.
 
-For additional support, refer to the [Troubleshooting section](getting-started-api.md#troubleshooting) in the Getting Started guide or contact [open-llm@scilifelab.se](mailto:open-llm@scilifelab.se).
+For additional support, refer to the [Troubleshooting section](getting-started-api.md#troubleshooting) in the Getting Started guide or contact [openllm@scilifelab.se](mailto:openllm@scilifelab.se).

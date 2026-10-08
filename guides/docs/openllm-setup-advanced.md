@@ -4,7 +4,7 @@ Our deployment files are public on [GitHub](https://github.com/ScilifelabDataCen
 
 ## Summary
 
-The front-end or chat interface uses the service Open WebUI at `open-llm.scilifelab.se` (alias is `openllm.scilifelab.se`). It runs on a Kubernetes cluster at KTH and handles login, chat history, API keys, document search and rate limits.
+The front-end or chat interface uses the service Open WebUI at `openllm.scilifelab.se` (alias is `openllm.scilifelab.se`). It runs on a Kubernetes cluster at KTH and handles login, chat history, API keys, document search and rate limits.
 
 The models run on GPUs at three sites in Sweden: Chalmers e-Commons (C3SE) in Gothenburg, Safespring in Stockholm and KTH in Stockholm.
 
@@ -15,7 +15,7 @@ The models are served by vLLM with an OpenAI-compatible API.
    |
    | HTTPS
    v
- open-llm.scilifelab.se ........................ KTH, Stockholm
+ openllm.scilifelab.se ........................ KTH, Stockholm
  Open WebUI + PostgreSQL + Qdrant
    |
    |--- internal ------------> BGE-M3 embeddings
@@ -80,7 +80,7 @@ The A100 GPU has no FP8 or FP4 hardware. Qwen3-235B-A22B (about 470 GB of weight
 
 ## Models
 
-Models change during the pilot, and the table shows what runs at the time of writing. If you would like a specific open-weight model, tell us at open-llm@scilifelab.se. For the live list, with the exact model IDs to use in API calls, call `GET https://open-llm.scilifelab.se/api/models`.
+Models change during the pilot, and the table shows what runs at the time of writing. If you would like a specific open-weight model, tell us at openllm@scilifelab.se. For the live list, with the exact model IDs to use in API calls, call `GET https://openllm.scilifelab.se/api/models`.
 
 | Model | Runs on | Weights | Serving setup |
 |---|---|---|---|
@@ -93,7 +93,7 @@ Models change during the pilot, and the table shows what runs at the time of wri
 
 ## Using the API
 
-The backends have no public endpoints, so everything goes through Open WebUI. The base URL is `https://open-llm.scilifelab.se/api`, and you authenticate with a personal API key from **Settings → Account** in Open WebUI. If you cannot create a key, write to `open-llm@scilifelab.se` and we will help to provide the API access for your account. The paths follow the OpenAI API: `GET /api/models`, `POST /api/chat/completions`, and `POST /api/embeddings` with `"model": "bge-m3"`. Most OpenAI-compatible clients work once you change the base URL and the key.
+The backends have no public endpoints, so everything goes through Open WebUI. The base URL is `https://openllm.scilifelab.se/api`, and you authenticate with a personal API key from **Settings → Account** in Open WebUI. If you cannot create a key, write to `openllm@scilifelab.se` and we will help to provide the API access for your account. The paths follow the OpenAI API: `GET /api/models`, `POST /api/chat/completions`, and `POST /api/embeddings` with `"model": "bge-m3"`. Most OpenAI-compatible clients work once you change the base URL and the key.
 
 A few things follow from the setup. Each user can send up to 60 requests per minute, and requests above that get an error. Tool calling is enabled on the chat models. Qwen3.8-27B thinks before it answers, and the thinking counts against `max_tokens`. To turn thinking off for one request, add `"chat_template_kwargs": {"enable_thinking": false}`. For long answers, use streaming.
 
@@ -152,4 +152,4 @@ Everything on this page runs in Sweden, at KTH, Chalmers and Safespring. Prompts
 
 ## Questions and feedback
 
-`open-llm@scilifelab.se`
+`openllm@scilifelab.se`
