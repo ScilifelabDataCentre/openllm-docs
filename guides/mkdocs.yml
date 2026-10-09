@@ -1,5 +1,5 @@
-site_name: SciLifeLab OpenLLM
-site_description: SciLifeLab's pilot service for open-weight large language models
+site_name: Documentation
+site_description: SciLifeLab's pilot service for access to open-weight large language models
 site_url: https://openllm.scilifelab.se/guides/
 docs_dir: docs
 use_directory_urls: true
@@ -28,18 +28,22 @@ theme:
     - navigation.tracking
     - navigation.sections
     - navigation.expand
-    - toc.integrate
     - search.suggest
     - content.code.copy
 
 nav:
-  - Documentation home: index.md
-  - SciLifeLab OpenLLM: about.md
+  - Overview: index.md
+  - Registering an account: registration.md
+  - Web interface: web.md
   - Getting started with the API: getting-started-api.md
-  - Models: models.md
-  - How OpenLLM is set up: openllm-setup-advanced.md
-  - Announcements:
-      - First announcement: announcement.md
+  - Integration in scripts: scripts.md
+  - Integration in agentic systems: agents.md
+  - Connect to scientific tools: scientific-tools.md
+  - Connect to VS Code: vscode.md
+  - Connect to Qwen Code: qwencode.md
+  - Connect to Claude Code: claudecode.md
+  - Connect to Obsidian: obsidian.md
+  - How the service is set up: openllm-setup-advanced.md
 
 markdown_extensions:
   - admonition

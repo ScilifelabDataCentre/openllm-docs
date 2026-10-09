@@ -9,7 +9,7 @@ hide:
 
 # SciLifeLab OpenLLM
 
---8<-- "guides/docs/announcement.md:5:5"
+--8<-- "guides/docs/announcements.md:5:5"
 
 <pre class="about-code"><code>
 --8<-- "guides/docs/openllm-setup-advanced.md:113:120"
@@ -19,7 +19,7 @@ hide:
 
 <section class="about-facts" markdown="1">
 
---8<-- "guides/docs/announcement.md:11:16"
+--8<-- "guides/docs/announcements.md:11:16"
 
 </section>
 
@@ -31,7 +31,7 @@ hide:
 
 <section class="about-section about-section--access" markdown="1">
 
---8<-- "guides/docs/announcement.md:17:27"
+--8<-- "guides/docs/announcements.md:17:27"
 
 </section>
 
