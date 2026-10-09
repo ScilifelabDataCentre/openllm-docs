@@ -1,87 +1,10 @@
-# Using Qwen Code with the SciLifeLab OpenLLM API
+# Connect to Qwen Code
 
 Qwen Code is an AI-powered coding assistant that helps developers write, understand, and refactor code more efficiently. This guide explains how to configure Qwen Code to use the self-hosted SciLifeLab OpenLLM API, enabling you to leverage powerful AI coding assistance within your development workflow.
 
 ## Prerequisites
 
-Before configuring Qwen Code, you'll need:
-
-1. [**An API key** from the SciLifeLab OpenLLM service](getting-started-api.md#get-your-api-key)
-2. **Qwen Code** installed on your system
-
-## Installation
-
-Qwen Code can be installed on various platforms using different methods. Choose the approach that best fits your operating system and preferences.
-
-### For Linux and macOS
-
-1. Open your terminal
-2. Run the following command:
-
-```bash
-curl -fsSL https://qwen-code-assets.oss-cn-hangzhou.aliyuncs.com/installation/install-qwen-standalone.sh | bash
-```
-
-3. After installation, restart your terminal if the `qwen` command is not immediately available in your `PATH`
-
-### For Windows
-
-1. Open **PowerShell** (as a regular user)
-2. Run the following command:
-
-```powershell
-irm https://qwen-code-assets.oss-cn-hangzhou.aliyuncs.com/installation/install-qwen-standalone.ps1 | iex
-```
-
-3. After installation, restart your terminal if the `qwen` command is not recognized
-
-### Alternative Installation Methods
-
-**Using npm** (requires Node.js 22 or later):
-
-```bash
-npm install -g @qwen-code/qwen-code@latest
-```
-
-**Using Homebrew** (macOS and Linux):
-
-```bash
-brew install qwen-code
-```
-
-### After Installation (All Platforms)
-
-1. Navigate to your project directory:
-
-```bash
-cd your-project
-```
-
-2. [Configure Qwen Code](#configuring-qwen-code) with your SciLifeLab OpenLLM API key
-
-3. Launch Qwen Code:
-
-```bash
-qwen
-```
-
-3. On first launch, you will be prompted to:
-   - Connect a model provider (e.g., Alibaba ModelStudio, OpenAI, or a custom provider)
-   - Configure settings as needed
-
-## Getting Your API Key
-
-To obtain your API key, follow the instructions in the [Getting Started with the API](getting-started-api.md#get-your-api-key) guide:
-
-1. Log in to [https://openllm.scilifelab.se](https://openllm.scilifelab.se)
-2. Go to **Settings → Account → API Keys**
-3. Click **Create new API key**
-4. Copy and save the key securely. It starts with `sk-`
-
-!!! note
-    If you do not see the option to create an API key, ask the pilot team ([openllm@scilifelab.se](mailto:openllm@scilifelab.se)) to add you to the Pilot Users group.
-
-    Your API key expires after 4 weeks. Regenerate it when it stops working.
+In order to connect SciLifeLab OpenLLM to Qwen Code on your computer, you need to have [obtained an API key from your user account](../getting-started-api/). You also need Qwen Code to be installed on your computer. You can follow the [official Qwen Code guide to install it](https://qwenlm.github.io/qwen-code-docs/en/users/quickstart/).
 
 ## Configuring Qwen Code
 
@@ -210,4 +133,4 @@ If Qwen Code responds with an explanation of the function, your configuration is
 - **Slow responses**: This is a pilot on shared infrastructure, not a production service. Response times will vary depending on load.
 - **Connection timeout**: The service may be temporarily down for maintenance. Try again in a few minutes.
 
-For additional support, refer to the [Troubleshooting section](getting-started-api.md#troubleshooting) in the Getting Started guide or contact [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
+For additional support, refer to the [Troubleshooting section](../getting-started-api/#troubleshooting) in the Getting Started guide or contact [openllm@scilifelab.se](mailto:openllm@scilifelab.se).

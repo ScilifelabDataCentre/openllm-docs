@@ -1,11 +1,13 @@
+---
+hide:
+  - navigation
+---
+
 # SciLifeLab OpenLLM pilot: Our models
 
 **For:** Pilot users of the SciLifeLab-hosted LLM service
 **Service URL:** [https://openllm.scilifelab.se](https://openllm.scilifelab.se)
 **Contact:** [openllm@scilifelab.se](mailto:openllm@scilifelab.se)
-
-
-## The models
 
 Please note that we will be considering adding or replacing models during the pilot based on what users actually need in the future. If there is a specific open-weight model you would like access to, let us know at [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
 

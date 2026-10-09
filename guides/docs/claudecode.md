@@ -1,18 +1,14 @@
-# Using Claude Code with the SciLifeLab OpenLLM API
+# Connect to Claude Code
 
 Claude Code can use a model hosted by the SciLifeLab OpenLLM service through Open WebUI's Anthropic-compatible Messages API. This lets you use the same API key and available models as the web interface without an Anthropic API account.
 
 ## Prerequisites
 
-Before you begin, you need:
-
-1. An [API key](getting-started-api.md#get-your-api-key) for the SciLifeLab OpenLLM service
-2. [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) installed and available as the `claude` command
-3. A model ID exposed by the service
+In order to connect SciLifeLab OpenLLM to Claude Code on your computer, you need to have [obtained an API key from your user account](../getting-started-api/). You also need Claude Code to be installed on your computer and available as the the `claude` command. You can follow the [official Claude Code guide to install it](https://code.claude.com/docs/en/quickstart).
 
 ## Find an available model
 
-Create an API key in Open WebUI under **Settings -> Account -> API Keys**. Then list the model IDs available to your account:
+List the model IDs available to your account on SciLifeLab OpenLLM:
 
 ```bash
 export OPENWEBUI_URL="https://openllm.scilifelab.se"
@@ -113,4 +109,4 @@ If the command fails, check the following:
 - **404 error:** Check that `ANTHROPIC_BASE_URL` ends in `/api`, not `/api/v1`.
 - **Slow responses:** The pilot runs on shared infrastructure, so response times vary with service load.
 
-For account and API-key help, see [Getting started with the API](getting-started-api.md) or contact [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
+For account and API-key help, see [Getting started with the API](../getting-started-api/) or contact [openllm@scilifelab.se](mailto:openllm@scilifelab.se).

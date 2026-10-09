@@ -1,21 +1,21 @@
-# SciLifeLab OpenLLM Guides
+# Documentation
 
-Welcome to the SciLifeLab OpenLLM pilot documentation. This site collects guides, announcements, and reference material for users of the SciLifeLab-hosted LLM service at [openllm.scilifelab.se](https://openllm.scilifelab.se).
+## What this service is
 
-## Start here
+This pilot provides API access to open-weight LLMs hosted on infrastructure controlled by SciLifeLab.
 
-- [Getting started with the API](getting-started-api.md) — set up your API key, connect popular tools (VS Code/Continue, Obsidian, LangChain, LlamaIndex), and make your first request with `curl` or Python.
-- [Using the API with QwenCode](using-api-coding-agents.md)
-- [Using the API with ClaudeCode](using-api-with-claudecode.md)
+!!! info "What is an API?"
+    API stands for Application Programming Interface. It is a set of rules and protocols that allows different software applications to communicate to each other and exchange data or services.
 
-## Announcements
+The primary goal is enabling you to embed LLMs in your research workflows, automation pipelines, and tools via the API.
 
-- [SciLifeLab OpenLLM Pilot: First Announcement](announcement.md) — pilot kickoff, registration, and what to expect.
+A chat interface is available as a convenience, but the pilot is not optimized for a ChatGPT-style experience.
 
-## Policy
+For the full use policy, see the [SciLifeLab OpenLLM pilot use policy](/use-policy/) document.
 
-The full use policy is hosted as a separate document: see [openllm.scilifelab.se/use-policy/](/use-policy/).
+Your prompts and outputs stay on SciLifeLab-controlled infrastructure in Sweden. We do not train models on your data.
 
-## Get in touch
+## Organisations behind the service
 
-Questions, feedback, or trouble? Email [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
+## What's in this documentation
+

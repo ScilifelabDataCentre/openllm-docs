@@ -1,6 +1,11 @@
+---
+hide:
+  - navigation
+---
+
 # SciLifeLab OpenLLM Pilot: First Announcement
 
-## We're opening registration for the SciLifeLab OpenLLM pilot
+## 2026-05-28: We're opening registration for the SciLifeLab OpenLLM pilot
 
 [http://openllm.scilifelab.se](http://openllm.scilifelab.se) is a pilot service that SciLifeLab Data Centre is working on, and we are now accepting test users. This service gives you API access to open-weight LLMs running on our own infrastructure in Sweden.
 
@@ -13,8 +18,6 @@ A few things worth knowing:
 - **Your data stays here:** all processing happens on SciLifeLab-controlled infrastructure in Sweden. No third-party providers, no training on your data.
 - **We want to learn from you:** the goal of this pilot is to understand what use cases SciLifeLab-hosted LLMs can realistically support. We'll ask you to complete a short onboarding survey (~3 min) and check in with you twice during the pilot. We also welcome feedback at any time.
 - **For staff at infra units and affiliated research groups:** the service is intended to be used by staff affiliated to infrastructure units at SciLifeLab as well anyone working in a SciLifeLab-affiliated research group.
-
-## Want to join?
 
 In order to join, you need to do two things:
 
