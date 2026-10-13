@@ -2,20 +2,24 @@
 
 ## What this service is
 
-This pilot provides API access to open-weight LLMs hosted on infrastructure controlled by SciLifeLab.
+Our primary focus of SciLifeLab OpenLLM is enabling API-based access so that LLMs can be embedded in research workflows, automation pipelines, and agentic tools. We also welcome usage of the service through the web interface (for ChatGPT or Claude style experience) but are currently still in the process of optimising this interface and improving it based on user feedback. Please get acquinted with [our use policy](../docs/use-policy/) and read more about [the models that are available](../docs/models/).
 
-!!! info "What is an API?"
-    API stands for Application Programming Interface. It is a set of rules and protocols that allows different software applications to communicate to each other and exchange data or services.
+## Start here
 
-The primary goal is enabling you to embed LLMs in your research workflows, automation pipelines, and tools via the API.
+- [Creating an account](../docs/registration/) - eligibility criteria for users and registration process.
+- [Using SciLifeLab OpenLLM through the web interface](../docs/web/)
+- [Getting started with the API](../docs/getting-started-api/)
 
-A chat interface is available as a convenience, but the pilot is not optimized for a ChatGPT-style experience.
+## Get in touch
 
-For the full use policy, see the [SciLifeLab OpenLLM pilot use policy](/use-policy/) document.
+If you have questions, suggestions, or run into issues, there are two ways to get in touch:
 
-Your prompts and outputs stay on SciLifeLab-controlled infrastructure in Sweden. We do not train models on your data.
+- Slack channel for users: #openllm_users on ScilifeLab Slack
+- Email the SciLifeLab OpenLLM team: [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
 
-## Organisations behind the service
+## Suggestions for the documentation?
 
-## What's in this documentation
+If you have a suggestion for a change or a use case you would like to add, we welcome contributions. You can either send us an email (openllm@scilifelab.se) or simply make a pull request directly in [our Github repository](https://github.com/ScilifelabDataCentre/openllm-docs) (this is an MkDocs instance).
+
+
 

@@ -33,7 +33,7 @@ theme:
 
 nav:
   - Overview: index.md
-  - Registering an account: registration.md
+  - Creating an account: registration.md
   - Web interface: web.md
   - Getting started with the API: getting-started-api.md
   - Integration in scripts: scripts.md
