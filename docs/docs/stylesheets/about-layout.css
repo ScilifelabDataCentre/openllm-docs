@@ -252,3 +252,11 @@ body:has(.about-hero) .md-content__inner::before { display: none; }
 
   .about-section li { min-height: auto; }
 }
+
+:root > * {
+  --md-primary-fg-color: #045C64;
+  --md-primary-fg-color--light: #2f7f86;
+  --md-primary-fg-color--dark: #034a50;
+  --md-accent-fg-color: #034a50;
+  --md-typeset-a-color: #045C64;
+}
