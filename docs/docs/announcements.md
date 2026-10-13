@@ -3,7 +3,17 @@ hide:
   - navigation
 ---
 
-# SciLifeLab OpenLLM Pilot: First Announcement
+# Announcements
+
+## 2026-10-XX: Moving on to the second phase of the pilot
+
+After positive feedback and high uptake among the first set of pilot users, we are making some changes. One change is in the account creation process for SciLifeLab OpenLLM. Those who wish to create an account and use the service will no longer need to fill out a survey. Instead, you need to answer a few basic questions about yourself. After you verify your email, the team will review the registration request and approve it if we have enough room to accept another user. The pilot service continues to be accessible to SciLifeLab infrasructure and researcher communities.
+
+We received great feedback and made a large number of changes when it comes to availability of models through the API endpoints, and we feel confident that it is now useful for multiple use cases in the SciLifeLab community. We are now starting to explore use cases and requirements for using SciLifelab OpenLLM through the web interface (for ChatGPT or Claude style experience). We welcome users sending us feedback regarding the web interface.
+
+Throughout the first phase of the pilot, we added and removed some models that were available through the service as we received feedback and as we got access to more GPUs. From now on, we commit to announcing a planned decomission of a certain model at least 30 days in advance so that users have sufficient time to switch to using another model in their scripts, workflows, etc.
+
+Finally, we now have a public channel on SciLifeLab Slack for the community around this service: #openllm_users. The important announcements regarding this pilot will be made in this channel as well as on this page which you are reading right now.
 
 ## 2026-05-28: We're opening registration for the SciLifeLab OpenLLM pilot
 
