@@ -260,3 +260,7 @@ body:has(.about-hero) .md-content__inner::before { display: none; }
   --md-accent-fg-color: #034a50;
   --md-typeset-a-color: #045C64;
 }
+
+.md-content__inner {
+  padding-top: 0;
+}
