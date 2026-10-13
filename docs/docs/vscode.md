@@ -8,7 +8,7 @@ In order to connect SciLifeLab OpenLLM to Visual Studio Code you need to have [o
 
 Based on this guide: [Connect Visual Studio Code to Open WebUI for vibe coding](https://henrynavarro.org/connect-vs-code-to-open-webui-for-vibe-coding-e6f74f1148ec)
 
-Continue is an open-source AI code assistant extension for VS Code. To connect it to our service:
+[Continue](https://docs.continue.dev/) is an open-source AI code assistant extension for VS Code. To connect it to our service:
 
 1. Install the Continue extension from the VS Code marketplace.
 2. Open Continue config.

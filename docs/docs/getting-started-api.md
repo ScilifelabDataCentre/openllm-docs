@@ -14,7 +14,7 @@ In order to use the SciLifeLab OpenLLM service through API calls you need to be 
 4. Copy and save the key securely. It starts with `sk-`
 
 !!! note
-    If you do not see the option to create an API key, ask the pilot team ([openllm@scilifelab.se](mailto:openllm@scilifelab.se)) to add you to the Pilot Users group.
+    If you do not see the option to create an API key, ask the SciLifeLab OpenLLM team ([openllm@scilifelab.se](mailto:openllm@scilifelab.se)) to give you the correct permissions.
 
     Your API key expires after 4 weeks. Regenerate it when it stops working.
 
@@ -46,4 +46,4 @@ We put together more detailed documentation about various ways you can use the A
 - **Slow responses:** This is a pilot on shared infrastructure, not a production service. Response times will vary depending on load. If latency matters for your workflow, try reducing `max_tokens` or breaking requests into smaller chunks.
 - **Connection timeout:** The service may be temporarily down for maintenance or model changes. Try again in a few minutes. If it persists, email [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
 
-Need help getting started? Email [openllm@scilifelab.se](mailto:openllm@scilifelab.se) or reach out on Slack.
+Need help getting started? Email [openllm@scilifelab.se](mailto:openllm@scilifelab.se) or reach out on SciLifeLab Slack in the #openllm_users channel.
