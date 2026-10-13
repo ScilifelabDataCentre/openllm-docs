@@ -9,52 +9,46 @@ hide:
 
 # SciLifeLab OpenLLM
 
---8<-- "guides/docs/announcements.md:5:5"
+--8<-- "docs/docs/announcements.md:5:5"
 
 <pre class="about-code"><code>
---8<-- "guides/docs/openllm-setup-advanced.md:113:120"
+--8<-- "docs/docs/openllm-setup-advanced.md:113:120"
 </code></pre>
 
 </section>
 
 <section class="about-facts" markdown="1">
 
---8<-- "guides/docs/announcements.md:11:16"
+--8<-- "docs/docs/announcements.md:11:16"
 
 </section>
 
-<section class="about-section about-section--guides" markdown="1">
+<section class="about-section about-section--docs" markdown="1">
 
---8<-- "guides/docs/index.md:5:10"
+--8<-- "docs/docs/index.md:5:10"
 
 </section>
 
 <section class="about-section about-section--access" markdown="1">
 
---8<-- "guides/docs/announcements.md:17:27"
+--8<-- "docs/docs/announcements.md:17:27"
 
 </section>
 
 <section class="about-section about-section--announcement" markdown="1">
 
---8<-- "guides/docs/index.md:11:14"
+--8<-- "docs/docs/index.md:11:14"
 
 </section>
 
 <section class="about-section about-section--policy about-policy-summary" markdown="1">
 
---8<-- "use-policy/docs/index.md:12:20"
-
---8<-- "use-policy/docs/index.md:21:21"
-
---8<-- "use-policy/docs/index.md:24:28"
-
---8<-- "guides/docs/index.md:17:18"
+--8<-- "docs/docs/index.md:17:18"
 
 </section>
 
 <footer class="about-contact" markdown="1">
 
---8<-- "guides/docs/index.md:19:21"
+--8<-- "docs/docs/index.md:19:21"
 
 </footer>

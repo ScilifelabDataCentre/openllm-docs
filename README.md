@@ -4,9 +4,8 @@ Two MkDocs-Material sites that sit alongside the [OpenLLM](https://openllm.scili
 
 | Path | Purpose | Source |
 | --- | --- | --- |
-| `/use-policy/` | OpenLLM pilot use policy (single page) | `use-policy/` |
-| `/guides/`     | Onboarding, API guide, announcements    | `guides/` |
-| `/about/` | Primary landing page for the SciLifeLab OpenLLM service | `guides/docs/about.md` |
+| `/docs/`     | Onboarding, API guide, announcements    | `docs/` |
+| `/about/` | Primary landing page for the SciLifeLab OpenLLM service | `docs/docs/about.md` |
 
 Both are built into one Docker image (nginx serving static HTML) and are intended to be reverse-proxied behind the same domain as Open WebUI itself.
 
@@ -16,27 +15,18 @@ Both are built into one Docker image (nginx serving static HTML) and are intende
 openllm-docs/
 ├── Dockerfile               # multi-stage: builds both sites, serves with nginx
 ├── docker-compose.yml       # one-command local run on :8000
-├── nginx.conf               # routes /use-policy/ and /guides/ inside the container
+├── nginx.conf               # route /docs/ inside the container
 ├── requirements.txt         # mkdocs-material
 ├── theme/                   # shared Material overrides for both sites
 │   ├── main.html
 │   └── partials/
 │       └── openllm-navbar.html
-│
-├── use-policy/
-│   ├── mkdocs.yml
-│   └── docs/
-│       ├── index.md         # the policy itself
-│       └── assets/
-│           └── scilifelab_openllm_logo.svg # navbar wordmark
-│
-└── guides/
+└── docs/
     ├── mkdocs.yml
     └── docs/
         ├── index.md
         ├── about.md          # service landing page; reuses source documentation
-        ├── getting-started-api.md
-        ├── announcement.md
+        ├── [....]
         ├── stylesheets/
         │   ├── about-layout.css # About page structure and cards
         │   ├── about-code.css   # hero code card
@@ -54,8 +44,7 @@ openllm-docs/
 ```bash
 docker compose up --build
 # open http://localhost:8000/about/
-# open http://localhost:8000/use-policy/
-# open http://localhost:8000/guides/
+# open http://localhost:8000/docs/
 ```
 
 Or without compose:
@@ -65,11 +54,11 @@ docker build -t openllm-docs .
 docker run --rm -p 8000:8080 openllm-docs
 ```
 
-Locally, both sites serve from `/`, not from `/use-policy/` or `/guides/`. The subpaths only exist inside the Docker image.
+Locally, both sites serve from `/`, not from `/docs/`. The subpaths only exist inside the Docker image.
 
 ## Deploying alongside Open WebUI
 
-The Docker image listens on port 8080 and serves `/about/`, `/use-policy/`, and `/guides/`. The host's reverse proxy (the same one fronting Open WebUI) should route those paths to this container, and everything else to Open WebUI.
+The Docker image listens on port 8080 and serves `/about/` and `/docs/`. The host's reverse proxy (the same one fronting Open WebUI) should route those paths to this container, and everything else to Open WebUI.
 
 ### nginx on the host
 
@@ -86,13 +75,7 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
-    location /use-policy/ {
-        proxy_pass http://127.0.0.1:8000;
-        proxy_set_header Host $host;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    location /guides/ {
+    location /docs/ {
         proxy_pass http://127.0.0.1:8000;
         proxy_set_header Host $host;
         proxy_set_header X-Forwarded-Proto $scheme;
@@ -118,10 +101,7 @@ openllm.scilifelab.se {
     handle /about* {
         reverse_proxy 127.0.0.1:8000
     }
-    handle /use-policy/* {
-        reverse_proxy 127.0.0.1:8000
-    }
-    handle /guides/* {
+    handle /docs/* {
         reverse_proxy 127.0.0.1:8000
     }
     handle {
@@ -136,7 +116,7 @@ The plain `handle` directives preserve the path so the in-container nginx routes
 
 Once the paths are live, surface them inside the chat UI via **Admin Panel → Settings → Interface → Banners**, e.g.:
 
-> ⚠️ By using this service you agree to the [use policy](/use-policy/). New here? Start at the [OpenLLM service page](/about/).
+> ⚠️ By using this service you agree to the [use policy](/docs/use-policy/). New here? Start at the [OpenLLM service page](/about/).
 
 ## License / ownership
 

@@ -1,6 +1,6 @@
 site_name: Documentation
 site_description: SciLifeLab's pilot service for access to open-weight large language models
-site_url: https://openllm.scilifelab.se/guides/
+site_url: https://openllm.scilifelab.se/docs/
 docs_dir: docs
 use_directory_urls: true
 

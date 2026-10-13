@@ -12,20 +12,15 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Shared Material override used by both documentation sites.
 COPY theme/ ./theme/
 
-# Build use-policy site -> /site/use-policy
-COPY use-policy/ ./use-policy/
-RUN cd use-policy && mkdocs build --strict --site-dir /site/use-policy
-
-# Build guides site -> /site/guides
-COPY guides/ ./guides/
-RUN cd guides && mkdocs build --strict --site-dir /site/guides
+# Build docs site -> /site/docs
+COPY docs/ ./docs/
+RUN cd docs && mkdocs build --strict --site-dir /site/docs
 
 # ---- Runtime stage: nginx serving both subpaths as non-root ----
 FROM nginxinc/nginx-unprivileged:1.31-alpine
 
 # Copy built sites into the web root
-COPY --from=builder --chown=nginx:nginx /site/use-policy /usr/share/nginx/html/use-policy
-COPY --from=builder --chown=nginx:nginx /site/guides     /usr/share/nginx/html/guides
+COPY --from=builder --chown=nginx:nginx /site/docs     /usr/share/nginx/html/docs
 
 # Replace default nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
