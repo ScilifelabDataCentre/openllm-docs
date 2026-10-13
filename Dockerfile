@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.27
 
 # ---- Build stage: produce static HTML for both sites ----
-FROM python:3.14-slim AS builder
+FROM python:3.15-slim AS builder
 
 WORKDIR /build
 
