@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - restructure-and-review-before-phase-2
 
 permissions:
   contents: read
