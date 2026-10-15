@@ -1,17 +1,15 @@
-# SciLifeLab OpenLLM pilot: Our models
+---
+hide:
+  - navigation
+---
 
-**For:** Pilot users of the SciLifeLab-hosted LLM service
-**Service URL:** [https://openllm.scilifelab.se](https://openllm.scilifelab.se)
-**Contact:** [openllm@scilifelab.se](mailto:openllm@scilifelab.se)
+# Available models
 
-
-## The models
-
-Please note that we will be considering adding or replacing models during the pilot based on what users actually need in the future. If there is a specific open-weight model you would like access to, let us know at [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
+On this page you can find an overview of the various models that we offer through SciLifeLab OpenLLM. Please note that we will be considering adding or replacing models during the pilot based on what users actually need in the future. If there is a specific open-weight model you would like access to, let us know in the Slack channel for the users (#openllm_users on ScilifeLab Slack) or by emailing [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
 
 ---
 
-**`Mistral-Large-3-675B-Instruct-2512-NVFP4`**: A large general-purpose multimodal Mixture-of-Experts model with 41B active parameters, 675B total parameters, and a 2.5B vision encoder. Useful for advanced chat, long documents, scientific work, RAG, agents, tool use, and coding tasks.
+**`Mistral-Large-3-675B-Instruct-2512-NVFP4`**: A large general-purpose multimodal Mixture-of-Experts model with 41B active parameters, 675B total parameters, and a 2.5B vision encoder. Useful for advanced chat, long documents, scientific work, RAG, agents, tool use, and coding tasks. This model can also be used to generate images.
 
 **Our Recommendation:** Advanced chat and long documents
 
@@ -57,7 +55,7 @@ Please note that we will be considering adding or replacing models during the pi
 
 ---
 
-**`gemma3-27b`**: A 27B general-purpose multimodal model from Google. Useful for general chat, reasoning, summarization, multilingual tasks, image understanding, and document analysis.
+**`gemma3-27b`**: A 27B general-purpose multimodal model from Google. Useful for general chat, reasoning, summarization, multilingual tasks, image understanding, and document analysis. This model can also be used to generate images.
 
 **Our Recommendation:** Multilingual tasks.
 

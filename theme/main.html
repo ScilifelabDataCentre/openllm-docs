@@ -11,10 +11,14 @@
 {% block site_meta %}
   {{ super() }}
   {% if page and page.url == "about/" %}
-    <base href="/guides/about/">
+    <base href="/docs/about/">
   {% endif %}
 {% endblock %}
 
 {% block header %}
   {% include "partials/openllm-navbar.html" %}
+{% endblock %}
+
+{% block footer %}
+  {% include "partials/openllm-footer.html" %}
 {% endblock %}
