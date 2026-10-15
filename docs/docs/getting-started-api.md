@@ -22,6 +22,45 @@ In order to use the SciLifeLab OpenLLM service through API calls you need to be 
 
 SciLifelab OpenLLM exposes an OpenAI-compatible API. This means any script, tool, or library, that works with the OpenAI API also works with our service. You only need to change two things: the base URL (`https://openllm.scilifelab.se/api`) and the API key(`sk-...`).
 
+### Basic usage
+
+Check which models are available:
+
+```bash
+curl https://openllm.scilifelab.se/api/models \
+  -H "Authorization: Bearer <change-it-to-sk-your-api-key>"
+```
+
+Use a model name from that response in the `model` field of your requests:
+
+```bash
+curl https://openllm.scilifelab.se/api/chat/completions \
+  -H "Authorization: Bearer <change-it-to-sk-your-api-key>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "qwen3",
+    "messages": [{"role": "user", "content": "What is mass spectrometry?"}],
+    "max_tokens": 300
+  }'
+```
+
+You can also use the OpenAI Python client:
+
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://openllm.scilifelab.se/api",
+    api_key="<change-it-to-sk-your-api-key>",
+)
+response = client.chat.completions.create(
+    model="qwen3",
+    messages=[{"role": "user", "content": "What is mass spectrometry?"}],
+    max_tokens=300,
+)
+print(response.choices[0].message.content)
+```
+
 We put together more detailed documentation about various ways you can use the API:
 
 - [Using the API in scripts and workflows](../scripts/)

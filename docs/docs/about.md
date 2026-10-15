@@ -66,7 +66,7 @@ Everything runs in Sweden at SciLifeLab-controlled infrastructure: at KTH, Chalm
 </li>
 <li>
 <strong>We want to learn from you:</strong>
-The goal of the pilot is to learn and assess the capacity. Share what already works for your use cases and what could be improved.
+The goal of the pilot is to learn and assess the capacity. Share what already works for your use cases and what could be improved. Questions, suggestions, and reports of issues are welcome: join the `#openllm_users` channel on SciLifeLab Slack or email the [SciLifeLab OpenLLM team](mailto:openllm@scilifelab.se).
 </li>
 </ul>
 
@@ -74,6 +74,43 @@ The goal of the pilot is to learn and assess the capacity. Share what already wo
 
 <section class="about-section about-section--docs" markdown="1">
 
---8<-- "docs/docs/index.md:7:11"
+## Start here
+
+Choose the way you want to use SciLifeLab OpenLLM. Each guide covers the first steps and the access you need.
+
+<div class="about-start-cards">
+  <a class="about-start-card" href="../registration/">
+    <span class="about-start-card__number" aria-hidden="true">01</span>
+    <span class="about-start-card__content">
+      <strong>Creating an account</strong>
+      <span>Check your eligibility and follow the registration process.</span>
+    </span>
+    <span class="about-start-card__arrow" aria-hidden="true">→</span>
+  </a>
+  <a class="about-start-card" href="../web/">
+    <span class="about-start-card__number" aria-hidden="true">02</span>
+    <span class="about-start-card__content">
+      <strong>Use the web interface</strong>
+      <span>Chat with the available models in your browser.</span>
+    </span>
+    <span class="about-start-card__arrow" aria-hidden="true">→</span>
+  </a>
+  <a class="about-start-card" href="../getting-started-api/">
+    <span class="about-start-card__number" aria-hidden="true">03</span>
+    <span class="about-start-card__content">
+      <strong>Get started with the API</strong>
+      <span>Create an API key and make your first request from code.</span>
+    </span>
+    <span class="about-start-card__arrow" aria-hidden="true">→</span>
+  </a>
+</div>
+
+</section>
+
+<section class="about-section about-section--docs" markdown="1">
+
+## Get in touch
+
+Questions, suggestions, and reports of issues are welcome. Join the `#openllm_users` channel on SciLifeLab Slack or email the [SciLifeLab OpenLLM team](mailto:openllm@scilifelab.se).
 
 </section>

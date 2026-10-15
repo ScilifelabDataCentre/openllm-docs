@@ -1,23 +1,23 @@
 # OpenLLM docs
 
-Two MkDocs-Material sites that sit alongside the [OpenLLM](https://openllm.scilifelab.se) Open WebUI instance and surface user-facing documentation:
+A MkDocs-Material documentation site that sits alongside the [OpenLLM](https://openllm.scilifelab.se) Open WebUI instance. The site provides user-facing onboarding, API, integration, and service information. Its landing page is also exposed at `/about/`.
 
 | Path | Purpose | Source |
 | --- | --- | --- |
 | `/docs/`     | Onboarding, API guide, announcements    | `docs/` |
 | `/about/` | Primary landing page for the SciLifeLab OpenLLM service | `docs/docs/about.md` |
 
-Both are built into one Docker image (nginx serving static HTML) and are intended to be reverse-proxied behind the same domain as Open WebUI itself.
+The site is built into one Docker image, served as static HTML by nginx, and intended to be reverse-proxied behind the same domain as Open WebUI.
 
 ## Repo layout
 
 ```
 openllm-docs/
-├── Dockerfile               # multi-stage: builds both sites, serves with nginx
+├── Dockerfile               # multi-stage: builds the site and serves it with nginx
 ├── docker-compose.yml       # one-command local run on :8000
-├── nginx.conf               # route /docs/ inside the container
+├── nginx.conf               # routes /about/ and /docs/ inside the container
 ├── requirements.txt         # mkdocs-material
-├── theme/                   # shared Material overrides for both sites
+├── theme/                   # Material overrides
 │   ├── main.html
 │   └── partials/
 │       └── openllm-navbar.html
@@ -26,7 +26,12 @@ openllm-docs/
     └── docs/
         ├── index.md
         ├── about.md          # service landing page; reuses source documentation
-        ├── [....]
+        ├── getting-started-api.md
+        ├── scripts.md
+        ├── agents.md
+        ├── scientific-tools.md
+        ├── vscode.md
+        └── ...               # additional integrations and service details
         ├── stylesheets/
         │   ├── about-layout.css # About page structure and cards
         │   ├── about-code.css   # hero code card
@@ -54,7 +59,7 @@ docker build -t openllm-docs .
 docker run --rm -p 8000:8080 openllm-docs
 ```
 
-Locally, both sites serve from `/`, not from `/docs/`. The subpaths only exist inside the Docker image.
+When serving the site with MkDocs locally, it is available from `/`; the `/about/` and `/docs/` paths are provided by the Docker image.
 
 ## Deploying alongside Open WebUI
 

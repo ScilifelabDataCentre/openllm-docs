@@ -24,7 +24,7 @@ schema: v1
 models:
   - name: qwen3
     provider: openai
-    model: qwen3
+    model: Qwen/Qwen3.8-27B
     apiBase: https://openllm.scilifelab.se/api
     apiKey: sk-YOUR-TOKEN
     template: none
