@@ -30,6 +30,7 @@ nav:
   - Integration in agentic systems: agents.md
   - Connect to scientific tools: scientific-tools.md
   - Connect to VS Code: vscode.md
+  - Connect to Mistral Vibe Code: mistralcode.md
   - Connect to Qwen Code: qwencode.md
   - Connect to Claude Code: claudecode.md
   - Connect to Obsidian: obsidian.md

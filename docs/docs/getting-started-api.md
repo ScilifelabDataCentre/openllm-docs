@@ -65,6 +65,7 @@ We put together more detailed documentation about various ways you can use the A
 
 - [Using the API in scripts and workflows](../scripts/)
 - [Connect to VS Code](../vscode/)
+- [Connect to Mistral Code](../mistralcode/)
 - [Connect to Claude Code](../claudecode/)
 - [Connect to Qwen Code](../qwencode/)
 - [Connect to Obsidian](../obsidian/)
