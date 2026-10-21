@@ -14,7 +14,7 @@ Our primary focus of SciLifeLab OpenLLM is enabling API-based access so that LLM
 
 If you have questions, suggestions, or run into issues, there are two ways to get in touch:
 
-- Slack channel for users: #openllm_users on ScilifeLab Slack
+- Slack channel for users: #openllm_pilot_users on ScilifeLab Slack
 - Email the SciLifeLab OpenLLM team: [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
 
 ## Suggestions for the documentation?

@@ -66,7 +66,7 @@ Everything runs in Sweden at SciLifeLab-controlled infrastructure: at KTH, Chalm
 </li>
 <li>
 <strong>We want to learn from you:</strong>
-The goal of the pilot is to learn and assess the capacity. Share what already works for your use cases and what could be improved. Questions, suggestions, and reports of issues are welcome: join the `#openllm_users` channel on SciLifeLab Slack or email the [SciLifeLab OpenLLM team](mailto:openllm@scilifelab.se).
+The goal of the pilot is to learn and assess the capacity. Share what already works for your use cases and what could be improved. Questions, suggestions, and reports of issues are welcome: join the `#openllm_pilot_users` channel on SciLifeLab Slack or email the [SciLifeLab OpenLLM team](mailto:openllm@scilifelab.se).
 </li>
 </ul>
 
@@ -111,6 +111,6 @@ Choose the way you want to use SciLifeLab OpenLLM. Each guide covers the first s
 
 ## Get in touch
 
-Questions, suggestions, and reports of issues are welcome. Join the `#openllm_users` channel on SciLifeLab Slack or email the [SciLifeLab OpenLLM team](mailto:openllm@scilifelab.se).
+Questions, suggestions, and reports of issues are welcome. Join the `#openllm_pilot_users` channel on SciLifeLab Slack or email the [SciLifeLab OpenLLM team](mailto:openllm@scilifelab.se).
 
 </section>

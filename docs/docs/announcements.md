@@ -11,7 +11,7 @@ After positive feedback and high uptake among the first set of pilot users, we a
 
 We received great feedback and made a large number of changes when it comes to availability of models through the API endpoints. We are now starting to explore use cases and requirements for using SciLifelab OpenLLM through the web interface (for ChatGPT or Claude style experience). We welcome users sending us feedback regarding the web interface.
 
-Finally, we now have a public channel on SciLifeLab Slack for the community around this service: #openllm_users. The important announcements regarding this pilot will be made in this channel as well as on this page which you are reading right now.
+Finally, we now have a public channel on SciLifeLab Slack for the community around this service: #openllm_pilot_users. The important announcements regarding this pilot will be made in this channel as well as on this page which you are reading right now.
 
 ## 2026-05-28: We're opening registration for the SciLifeLab OpenLLM pilot
 
