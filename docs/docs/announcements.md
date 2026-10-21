@@ -5,13 +5,11 @@ hide:
 
 # Announcements
 
-## 2026-10-XX: Moving on to the second phase of the pilot
+## 2026-10-21: Moving on to the second phase of the pilot
 
 After positive feedback and high uptake among the first set of pilot users, we are making some changes. One change is in the account creation process for SciLifeLab OpenLLM. Those who wish to create an account and use the service will no longer need to fill out a survey. Instead, you need to answer a few basic questions about yourself. After you verify your email, the team will review the registration request and approve it if we have enough room to accept another user. The pilot service continues to be accessible to SciLifeLab infrasructure and researcher communities.
 
-We received great feedback and made a large number of changes when it comes to availability of models through the API endpoints, and we feel confident that it is now useful for multiple use cases in the SciLifeLab community. We are now starting to explore use cases and requirements for using SciLifelab OpenLLM through the web interface (for ChatGPT or Claude style experience). We welcome users sending us feedback regarding the web interface.
-
-Throughout the first phase of the pilot, we added and removed some models that were available through the service as we received feedback and as we got access to more GPUs. From now on, we commit to announcing a planned decomission of a certain model at least 30 days in advance so that users have sufficient time to switch to using another model in their scripts, workflows, etc.
+We received great feedback and made a large number of changes when it comes to availability of models through the API endpoints. We are now starting to explore use cases and requirements for using SciLifelab OpenLLM through the web interface (for ChatGPT or Claude style experience). We welcome users sending us feedback regarding the web interface.
 
 Finally, we now have a public channel on SciLifeLab Slack for the community around this service: #openllm_users. The important announcements regarding this pilot will be made in this channel as well as on this page which you are reading right now.
 
@@ -23,22 +21,12 @@ The short version: if you want to plug an LLM into your research scripts, data p
 
 A few things worth knowing:
 
-- **`gemma3-27b` is the default, but `Qwen3.6-35B-A3B-FP8` is also available.** See the user guide for guidance on when to pick which, and let us know if there's another open-weight model you'd like us to consider adding during the pilot.
 - **For API-based usage primarily:** the pilot is designed for programmatic use. Embed models in your workflows, build agents, run batch jobs. A chat UI exists as a convenience, but we prefer that you explore use cases with APi access.
 - **Your data stays here:** all processing happens on SciLifeLab-controlled infrastructure in Sweden. No third-party providers, no training on your data.
 - **We want to learn from you:** the goal of this pilot is to understand what use cases SciLifeLab-hosted LLMs can realistically support. We'll ask you to complete a short onboarding survey (~3 min) and check in with you twice during the pilot. We also welcome feedback at any time.
 - **For staff at infra units and affiliated research groups:** the service is intended to be used by staff affiliated to infrastructure units at SciLifeLab as well anyone working in a SciLifeLab-affiliated research group.
 
-In order to join, you need to do two things:
-
-1. Register here: [https://openllm.scilifelab.se/](https://openllm.scilifelab.se/)
-2. Fill out out this onboarding survey (3 mins) here: [https://scilifelab.typeform.com/to/xF9XFHsr](https://scilifelab.typeform.com/to/xF9XFHsr)
-
-We will approve registrations once both are complete within 24 hours, and you can grab your API key from **Settings → Account → API Keys**. A user guide with setup instructions, code examples, and the use policy will be shared with you upon registration. If you run into any issues, reach out to us at [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
-
 !!! warning "Heads up"
     Just a quick heads-up as we kick off the pilot: we do not have any agreements (such as Service Level Agreements, SLAs) in place, and uptime or continuous availability is not guaranteed at this stage. Please avoid sending any human sensitive data to the service.
 
 We are looking forward to seeing what you build with it.
-
-[^1]: Gemma is provided under and subject to the Gemma Terms of Use found at [ai.google.dev/gemma/terms](https://ai.google.dev/gemma/terms).
