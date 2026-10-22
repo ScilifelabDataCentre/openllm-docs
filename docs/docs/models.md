@@ -5,7 +5,7 @@ hide:
 
 # Available models
 
-On this page you can find an overview of the various models that we offer through SciLifeLab OpenLLM. Please note that we will be considering adding or replacing models during the pilot based on what users actually need in the future. If there is a specific open-weight model you would like access to, let us know in the Slack channel for the users (#openllm_users on ScilifeLab Slack) or by emailing [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
+On this page you can find an overview of the various models that we offer through SciLifeLab OpenLLM. Please note that we will be considering adding or replacing models during the pilot based on what users actually need in the future. If there is a specific open-weight model you would like access to, let us know in the Slack channel for the users (#openllm_pilot_users on ScilifeLab Slack) or by emailing [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
 
 ---
 

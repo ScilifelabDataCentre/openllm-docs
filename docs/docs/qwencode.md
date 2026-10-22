@@ -128,4 +128,4 @@ If Qwen Code responds with an explanation of the function, your configuration is
 - **Slow responses**: This is a pilot on shared infrastructure, not a production service. Response times will vary depending on load.
 - **Connection timeout**: The service may be temporarily down for maintenance. Try again in a few minutes.
 
-For additional support, refer to the [Troubleshooting section](../getting-started-api/#troubleshooting) in the Getting Started guide, get in touch with others in the SciLifeLab Slack channel (#openllm_users) or contact the team behind the service by email ([openllm@scilifelab.se](mailto:openllm@scilifelab.se)).
+For additional support, refer to the [Troubleshooting section](../getting-started-api/#troubleshooting) in the Getting Started guide, get in touch with others in the SciLifeLab Slack channel (#openllm_pilot_users) or contact the team behind the service by email ([openllm@scilifelab.se](mailto:openllm@scilifelab.se)).

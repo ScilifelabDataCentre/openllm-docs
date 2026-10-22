@@ -16,4 +16,4 @@ At this point, the models can open a web page if given a direct URL or if a URL 
 
 ## Issues, questions, wishes
 
-If you have specific issues, wishes, or questions, let us know in the Slack channel for the users (#openllm_users on ScilifeLab Slack) or by emailing [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
+If you have specific issues, wishes, or questions, let us know in the Slack channel for the users (#openllm_pilot_users on ScilifeLab Slack) or by emailing [openllm@scilifelab.se](mailto:openllm@scilifelab.se).

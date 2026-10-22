@@ -85,4 +85,4 @@ We put together more detailed documentation about various ways you can use the A
 - **Slow responses:** This is a pilot on shared infrastructure, not a production service. Response times will vary depending on load. If latency matters for your workflow, try reducing `max_tokens` or breaking requests into smaller chunks.
 - **Connection timeout:** The service may be temporarily down for maintenance or model changes. Try again in a few minutes. If it persists, email [openllm@scilifelab.se](mailto:openllm@scilifelab.se).
 
-Need help getting started? Email [openllm@scilifelab.se](mailto:openllm@scilifelab.se) or reach out on SciLifeLab Slack in the #openllm_users channel.
+Need help getting started? Email [openllm@scilifelab.se](mailto:openllm@scilifelab.se) or reach out on SciLifeLab Slack in the #openllm_pilot_users channel.

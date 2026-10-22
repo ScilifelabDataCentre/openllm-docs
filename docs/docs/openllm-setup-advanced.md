@@ -1,6 +1,6 @@
 # How SciLifeLab OpenLLM is set up
 
-On this page we describe the setup behind SciLifeLab OpenLLM for advanced users who are curious to learn about it. We are making use of a number of open source projects out there to run the service. The parts that we modify or create ourselves are also shared as open source code.
+On this page we describe the setup behind SciLifeLab OpenLLM for advanced users who are curious to learn about it. We are making use of a number of open source projects out there to run the service. The parts that we modify or create ourselves are also shared as open source code. Keep in mind that this is a pilot service and any of the things described here can change without notice.
 
 ## Summary
 
