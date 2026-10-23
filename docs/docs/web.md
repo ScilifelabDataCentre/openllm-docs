@@ -10,7 +10,7 @@ In order to use the SciLifeLab OpenLLM service through the web interface you nee
 
 Press on the button "Log in" button on top right of this page, enter your account information, and you will end up in the web interface. This interface is provided by [Open WebUI](https://github.com/open-webui/open-webui), an open source project that we are running for SciLifeLab OpenLLM.
 
-This interface is quite similar to other LLM-based services such as Claude, ChatGPT, or Mistral. Explore it to get familiriazed with what is possible. You can send a query as text, audio, or, for example, attach files. In the bottom right corner of the form you can select a model. Note that different models have different capacities (for example, image generation is not possible with all models), different speed, etc.; read the [overview of models that we offer](../docs/models/) to learn about the differences.
+This interface is quite similar to other LLM-based services such as Claude, ChatGPT, or Mistral. Explore it to get familiarized with what is possible. You can send a query as text, audio, or, for example, attach files. In the bottom right corner of the form you can select a model. Note that different models have different capacities (for example, image generation is not possible with all models), different speed, etc.; read the [overview of models that we offer](../docs/models/) to learn about the differences.
 
 At this point, the models can open a web page if given a direct URL or if a URL is stored in their memory but none of the models is able to do an independent web *search*, we are working on enabling this in a privacy-aware way.
 
