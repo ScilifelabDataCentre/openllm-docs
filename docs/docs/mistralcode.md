@@ -16,39 +16,8 @@ Before you begin, you need:
 
 1. An [API key](getting-started-api.md#get-your-api-key) for the SciLifeLab
    OpenLLM service
-2. The Mistral Vibe CLI installed (see below)
+2. The Mistral Vibe CLI installed. You can follow the [official Mistral guide to install it](https://docs.mistral.ai/vibe/code/cli/install-setup)
 3. A model ID exposed by the service
-
-## Install the CLI
-
-On Linux or macOS:
-
-```
-curl -LsSf https://mistral.ai/vibe/install.sh | bash
-```
-
-This installs three executables (`vibe`, `vibe-acp`, `vibe-app-server`) to
-`~/.local/bin`. If that directory isn't already on your `PATH`, the installer
-prints a warning like:
-
-```
-[ERROR] Your PATH does not include the folder that contains 'vibe'.
-[ERROR] Add this directory to your shell profile, then restart your terminal:
-[ERROR]   export PATH="/home/<you>/.local/bin:$PATH"
-```
-
-Add the suggested line to your shell profile (`~/.bashrc`, `~/.zshrc`, or
-equivalent), then restart your terminal or run `source` on the profile file.
-Confirm it worked:
-
-```
-vibe --version
-```
-
-Alternative install methods (`uv tool install mistral-vibe` or
-`pip install mistral-vibe`) are also available — see the
-[CLI install guide](https://docs.mistral.ai/vibe/code/cli/install-setup) for
-details and Windows instructions.
 
 ## Find an available model
 
